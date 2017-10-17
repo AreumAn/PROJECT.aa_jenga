@@ -20,6 +20,7 @@ public class HelpActivity extends BaseActivity {
         // Yes, testing from my machine now!
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
+        // OK
 
         TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
         toolbar_title.setText(getResources().getString(R.string.title_activity_help));
