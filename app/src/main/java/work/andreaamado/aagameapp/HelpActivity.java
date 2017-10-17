@@ -17,6 +17,7 @@ public class HelpActivity extends BaseActivity {
 
         // Find the toolbar view inside the activity layout
         // Hello Andrea! Git test!
+        // Yes, testing from my machine now!
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
