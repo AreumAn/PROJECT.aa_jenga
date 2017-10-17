@@ -19,7 +19,7 @@ public class AboutActivity extends BaseActivity {
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
-        //test
+        //test from Areum
         //test from Andrea machine
 
         TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
