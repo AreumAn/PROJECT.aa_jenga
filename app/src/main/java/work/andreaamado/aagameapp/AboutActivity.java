@@ -21,6 +21,7 @@ public class AboutActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         //test from Areum
         //test from Andrea machine
+        //test again
 
         TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
         toolbar_title.setText(getResources().getString(R.string.title_activity_about));
