@@ -206,11 +206,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_row_2" />
 
     <Button
-        android:id="@+id/btn_end"
+        android:id="@+id/btn_enter"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorGrayDark"
-        android:text="END\nGAME"
+        android:background="@color/colorAccent"
+        android:text="ENTER"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
@@ -263,11 +263,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_row_3" />
 
     <Button
-        android:id="@+id/btn_enter"
+        android:id="@+id/btn_end"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorAccent"
-        android:text="ENTER"
+        android:background="@color/colorGrayDark"
+        android:text="END\nGAME"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
