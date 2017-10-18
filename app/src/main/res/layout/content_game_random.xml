@@ -123,38 +123,41 @@
             android:id="@+id/btn_enter"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="50dp"
             android:background="@color/colorAccent"
             android:text="ENTER"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline_row_2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_col_4"
+            app:layout_constraintHorizontal_bias="1.0" />
 
         <Button
             android:id="@+id/btn_end"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginStart="0dp"
             android:background="@color/colorGrayDark"
             android:text="END GAME"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_row_4"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_col_4"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline_row_3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_row_2"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_row_2"
@@ -164,18 +167,20 @@
             app:layout_constraintGuide_percent="0.2" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline_row_4"
+            android:id="@+id/guideline_row_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.8" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline_row_3"
+            android:id="@+id/guideline_col_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="180dp" />
 
     </android.support.constraint.ConstraintLayout>
 
