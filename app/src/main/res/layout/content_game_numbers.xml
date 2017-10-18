@@ -209,11 +209,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_row_2" />
 
     <Button
-        android:id="@+id/btn_end"
+        android:id="@+id/btn_enter"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorGrayDark"
-        android:text="END\nGAME"
+        android:background="@color/colorAccent"
+        android:text="ENTER"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
@@ -221,20 +221,6 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline_col_3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_row_2" />
-
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorPrimary"
-        android:text="1"
-        android:textColor="@android:color/white"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline_col_1"
-        app:layout_constraintTop_toTopOf="@+id/guideline_row_3" />
 
     <Button
         android:id="@+id/btn_2"
@@ -265,11 +251,25 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_row_3" />
 
     <Button
-        android:id="@+id/btn_enter"
+        android:id="@+id/btn_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/colorAccent"
-        android:text="ENTER"
+        android:background="@color/colorPrimary"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_col_1"
+        app:layout_constraintTop_toTopOf="@+id/guideline_row_3" />
+
+    <Button
+        android:id="@+id/btn_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGrayDark"
+        android:text="END\nGAME"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
