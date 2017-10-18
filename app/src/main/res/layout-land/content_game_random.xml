@@ -98,15 +98,15 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/btn_enter"
+            android:id="@+id/btn_end"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginStart="0dp"
-            android:background="@color/colorAccent"
-            android:text="ENTER"
+            android:background="@color/colorGrayDark"
+            android:text="END GAME"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
@@ -117,15 +117,15 @@
             app:layout_constraintHorizontal_bias="0.0" />
 
         <Button
-            android:id="@+id/btn_end"
+            android:id="@+id/btn_enter"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginStart="0dp"
-            android:background="@color/colorGrayDark"
-            android:text="END GAME"
+            android:background="@color/colorAccent"
+            android:text="ENTER"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_row_4"
@@ -139,21 +139,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.2" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_col_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.8" />
+            app:layout_constraintGuide_percent="0.9" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_row_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.1" />
+            app:layout_constraintGuide_percent="0.25" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_row_3"
@@ -167,7 +167,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.9" />
+            app:layout_constraintGuide_percent="0.75" />
 
     </android.support.constraint.ConstraintLayout>
 
