@@ -120,24 +120,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline_row_1">
 
         <Button
-            android:id="@+id/btn_end"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="32dp"
-            android:background="@color/colorGrayDark"
-            android:text="END GAME"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline_row_2"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
             android:id="@+id/btn_enter"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -154,6 +136,24 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline_row_3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:background="@color/colorGrayDark"
+            android:text="END GAME"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_row_2"
             app:layout_constraintVertical_bias="0.0" />
 
         <android.support.constraint.Guideline
