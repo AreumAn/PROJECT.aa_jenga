@@ -1,17 +1,22 @@
 package work.andreaamado.aagameapp;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
 
@@ -53,6 +58,55 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        //----- Get data from JSON file -----//
+
+        // Get assets
+        AssetManager assetManager = getResources().getAssets();
+
+        try{
+            // Open Json
+            AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("questions.json");
+
+            // Read Stream
+            BufferedReader br = new BufferedReader(new InputStreamReader(jfile));
+            StringBuilder sb = new StringBuilder();
+
+            // Error : if file size is too big(over 4096 byte)
+            int bufferSize = 1024 * 1024;
+            char readBuf [] = new char[bufferSize];
+            int resultSize = 0;
+
+            // Read all file
+            while((resultSize = br.read(readBuf))  != -1){
+                if(resultSize == bufferSize){
+                    sb.append(readBuf);
+                }else{
+                    for(int i = 0; i < resultSize; i++){
+                        sb.append(readBuf[i]);
+                    }
+                }
+            }
+
+            String jString = sb.toString();
+
+            // Get JSONObject
+            JSONObject jsonObject =  new JSONObject(jString);
+
+            JSONArray jsonArray = jsonObject.getJSONArray("questions");
+            //ArrayList<String> list = new ArrayList<String>();
+
+            for(int i=0; i<jsonArray.length(); i++) {
+                jsonObject = jsonArray.getJSONObject(i);
+                System.out.println(jsonObject.getString("CODE") + " : " + jsonObject.getString("TYPE") + " : " + jsonObject.getString("QUESTION"));
+               // list.add(jsonObject.getString("CODE") +" "+ jsonObject.getString("QUESTION"));
+            }
+
+        }catch(JSONException je){
+            Log.e("jsonErr", "JSON ERROR", je);
+        }catch(Exception e){
+            Log.e("execption", "NO FILE", e);
+        }
     }
 
 }
