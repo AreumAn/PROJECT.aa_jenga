@@ -67,7 +67,6 @@ public class MainActivity extends BaseActivity {
                         // Do nothing but close the dialog
                         Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
                         startActivity(intent);
-
                         dialog.dismiss();
                     }
                 });
