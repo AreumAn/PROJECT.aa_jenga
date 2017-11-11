@@ -803,7 +803,7 @@
     {
       "CODE": "Q0161",
       "TYPE": "General",
-      "QUESTION": "Have you ever had food poisonring?"
+      "QUESTION": "Have you ever had food poisoning?"
     },
     {
       "CODE": "Q0162",
@@ -1474,6 +1474,506 @@
       "CODE": "Q0295",
       "TYPE": "family",
       "QUESTION": "Who is your favourite family memeber?"
+    },
+    {
+      "CODE": "Q0296",
+      "TYPE": "school",
+      "QUESTION": "What was the name of your elementary school?"
+    },
+    {
+      "CODE": "Q0297",
+      "TYPE": "school",
+      "QUESTION": "What was the name of your high school?"
+    },
+    {
+      "CODE": "Q0298",
+      "TYPE": "school",
+      "QUESTION": "What is your earliest memory of school?"
+    },
+    {
+      "CODE": "Q0299",
+      "TYPE": "school",
+      "QUESTION": "What was your first teacher's name?"
+    },
+    {
+      "CODE": "Q0300",
+      "TYPE": "school",
+      "QUESTION": "What was your favourite elementary school teacher? "
+    },
+    {
+      "CODE": "Q0301",
+      "TYPE": "school",
+      "QUESTION": "Who was your least favourite elementary school teacher?"
+    },
+    {
+      "CODE": "Q0302",
+      "TYPE": "school",
+      "QUESTION": "Who was your favourite high school teacher?"
+    },
+    {
+      "CODE": "Q0303",
+      "TYPE": "school",
+      "QUESTION": "Who was your least favourite high school teacher? "
+    },
+    {
+      "CODE": "Q0304",
+      "TYPE": "school",
+      "QUESTION": "Who was your first friend in school?"
+    },
+    {
+      "CODE": "Q0305",
+      "TYPE": "school",
+      "QUESTION": "Who was your first crust in school?"
+    },
+    {
+      "CODE": "Q0306",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in trouble in elementary school?"
+    },
+    {
+      "CODE": "Q0307",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in trouble in high school?"
+    },
+    {
+      "CODE": "Q0308",
+      "TYPE": "school",
+      "QUESTION": "What is your favourite memory of elementary school?"
+    },
+    {
+      "CODE": "Q0309",
+      "TYPE": "school",
+      "QUESTION": "What is your least favourite memory of elementary school?"
+    },
+    {
+      "CODE": "Q0310",
+      "TYPE": "school",
+      "QUESTION": "What is your favourite memory of high school?"
+    },
+    {
+      "CODE": "Q0311",
+      "TYPE": "school",
+      "QUESTION": "What is your least favourite memory of high school?"
+    },
+    {
+      "CODE": "Q0312",
+      "TYPE": "school",
+      "QUESTION": "What is the highest grade that you have received on a test?"
+    },
+    {
+      "CODE": "Q0313",
+      "TYPE": "school",
+      "QUESTION": "What is the lowest grade that you have received on a test?"
+    },
+    {
+      "CODE": "Q0314",
+      "TYPE": "school",
+      "QUESTION": "What was your most embarrassing moment of elementary school?"
+    },
+    {
+      "CODE": "Q0315",
+      "TYPE": "school",
+      "QUESTION": "What was your most embarrassing moment of high school?"
+    },
+    {
+      "CODE": "Q0316",
+      "TYPE": "school",
+      "QUESTION": "Were you ever sent to the principal's office?"
+    },
+    {
+      "CODE": "Q0317",
+      "TYPE": "school",
+      "QUESTION": "Were you ever on a sports team?"
+    },
+    {
+      "CODE": "Q0318",
+      "TYPE": "school",
+      "QUESTION": "Did you ever win any awards?"
+    },
+    {
+      "CODE": "Q0319",
+      "TYPE": "school",
+      "QUESTION": "Who was your rival?"
+    },
+    {
+      "CODE": "Q0320",
+      "TYPE": "school",
+      "QUESTION": "How many people went to your elementary school?"
+    },
+    {
+      "CODE": "Q0321",
+      "TYPE": "school",
+      "QUESTION": "How many people went to your high school?"
+    },
+    {
+      "CODE": "Q0322",
+      "TYPE": "school",
+      "QUESTION": "Did you go to university or college?"
+    },
+    {
+      "CODE": "Q0323",
+      "TYPE": "school",
+      "QUESTION": "What's the highest level of education that you have?"
+    },
+    {
+      "CODE": "Q0324",
+      "TYPE": "school",
+      "QUESTION": "What's the highest level of education your mother has?"
+    },
+    {
+      "CODE": "Q0325",
+      "TYPE": "school",
+      "QUESTION": "What's the highest level of education that your father has?"
+    },
+    {
+      "CODE": "Q0326",
+      "TYPE": "school",
+      "QUESTION": "Who is the most educated person in your family?"
+    },
+    {
+      "CODE": "Q0327",
+      "TYPE": "school",
+      "QUESTION": "What was the name of your post-secondary institution?"
+    },
+    {
+      "CODE": "Q0328",
+      "TYPE": "school",
+      "QUESTION": "What was your major in university/college?"
+    },
+    {
+      "CODE": "Q0329",
+      "TYPE": "school",
+      "QUESTION": "Did you belong to any clubs in elementary school?"
+    },
+    {
+      "CODE": "Q0330",
+      "TYPE": "school",
+      "QUESTION": "Did you belong to any clubs in high school?"
+    },
+    {
+      "CODE": "Q0331",
+      "TYPE": "school",
+      "QUESTION": "Did you belong to any clubs in university/college? "
+    },
+    {
+      "CODE": "Q0332",
+      "TYPE": "school",
+      "QUESTION": "Have you ever had a crush on your teacher?"
+    },
+    {
+      "CODE": "Q0333",
+      "TYPE": "school",
+      "QUESTION": "Can you name all of your teachers from elementary school? "
+    },
+    {
+      "CODE": "Q0334",
+      "TYPE": "school",
+      "QUESTION": "What was your favourite class in university/college?"
+    },
+    {
+      "CODE": "Q0335",
+      "TYPE": "school",
+      "QUESTION": "What was your least favourite class in college/university?"
+    },
+    {
+      "CODE": "Q0336",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in a play in elementary school?"
+    },
+    {
+      "CODE": "Q0337",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in a play in high school?"
+    },
+    {
+      "CODE": "Q0338",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in a play in university/college?"
+    },
+    {
+      "CODE": "Q0339",
+      "TYPE": "school",
+      "QUESTION": "How did you pay for university/college?"
+    },
+    {
+      "CODE": "Q0340",
+      "TYPE": "school",
+      "QUESTION": "Where did you live during college/university?"
+    },
+    {
+      "CODE": "Q0341",
+      "TYPE": "school",
+      "QUESTION": "Have you ever cheated on a test/exam in school?"
+    },
+    {
+      "CODE": "Q0342",
+      "TYPE": "school",
+      "QUESTION": "Were you ever caught cheating on a test in school?"
+    },
+    {
+      "CODE": "Q0343",
+      "TYPE": "school",
+      "QUESTION": "Who was your funniest teacher?"
+    },
+    {
+      "CODE": "Q0344",
+      "TYPE": "school",
+      "QUESTION": "Who was your nerdiest teacher?"
+    },
+    {
+      "CODE": "Q0345",
+      "TYPE": "school",
+      "QUESTION": "Were you ever suspended from school?"
+    },
+    {
+      "CODE": "Q0346",
+      "TYPE": "school",
+      "QUESTION": "Did you ever have a school pet?"
+    },
+    {
+      "CODE": "Q0347",
+      "TYPE": "school",
+      "QUESTION": "Were you ever in a schoolyard fight?"
+    },
+    {
+      "CODE": "Q0348",
+      "TYPE": "school",
+      "QUESTION": "Did you ever steal from anyone at school?"
+    },
+    {
+      "CODE": "Q0349",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer science or math?"
+    },
+    {
+      "CODE": "Q0350",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer visual art or music?"
+    },
+    {
+      "CODE": "Q0351",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer language studies or music?"
+    },
+    {
+      "CODE": "Q0352",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer drama or math?"
+    },
+    {
+      "CODE": "Q0353",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer history or visual art?"
+    },
+    {
+      "CODE": "Q0354",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer science or physical education?"
+    },
+    {
+      "CODE": "Q0355",
+      "TYPE": "school",
+      "QUESTION": "Do you prefer drama or history?"
+    },
+    {
+      "CODE": "Q0356",
+      "TYPE": "school",
+      "QUESTION": "Do you remember your favourite movie when you were in grade six?"
+    },
+    {
+      "CODE": "Q0357",
+      "TYPE": "school",
+      "QUESTION": "Do you remember your favourite band when you were in your senior year of high school?"
+    },
+    {
+      "CODE": "Q0358",
+      "TYPE": "school",
+      "QUESTION": "Who was your elementary school bully?"
+    },
+    {
+      "CODE": "Q0359",
+      "TYPE": "school",
+      "QUESTION": "Who was your high school bully?"
+    },
+    {
+      "CODE": "Q0360",
+      "TYPE": "school",
+      "QUESTION": "Were you ever a bully?"
+    },
+    {
+      "CODE": "Q0361",
+      "TYPE": "school",
+      "QUESTION": "Who were you jealous of in elementary school?"
+    },
+    {
+      "CODE": "Q0362",
+      "TYPE": "school",
+      "QUESTION": "Who were you jealous of in high school? "
+    },
+    {
+      "CODE": "Q0363",
+      "TYPE": "school",
+      "QUESTION": "Who were you jealous of in college/university?"
+    },
+    {
+      "CODE": "Q0364",
+      "TYPE": "school",
+      "QUESTION": "Did you ever get caught kissing/making out at school?"
+    },
+    {
+      "CODE": "Q0365",
+      "TYPE": "school",
+      "QUESTION": "What was in your school yard at your elementary school?"
+    },
+    {
+      "CODE": "Q0366",
+      "TYPE": "school",
+      "QUESTION": "Do you remember any field trips from elementary school?"
+    },
+    {
+      "CODE": "Q0367",
+      "TYPE": "school",
+      "QUESTION": "Do you remember any field trips from high school?"
+    },
+    {
+      "CODE": "Q0368",
+      "TYPE": "school",
+      "QUESTION": "What do you remember from your very first day of school?"
+    },
+    {
+      "CODE": "Q0369",
+      "TYPE": "school",
+      "QUESTION": "What do you remember from your last day of high school?"
+    },
+    {
+      "CODE": "Q0370",
+      "TYPE": "school",
+      "QUESTION": "Did you ever plagiarize a writing assignment?"
+    },
+    {
+      "CODE": "Q0371",
+      "TYPE": "school",
+      "QUESTION": "Did you ever gossip about anyone in elementary school?"
+    },
+    {
+      "CODE": "Q0372",
+      "TYPE": "school",
+      "QUESTION": "Did you ever gossip about anyone in high school?"
+    },
+    {
+      "CODE": "Q0373",
+      "TYPE": "school",
+      "QUESTION": "Were there any rumours about you in high school?"
+    },
+    {
+      "CODE": "Q0374",
+      "TYPE": "school",
+      "QUESTION": "Did you have a school mascot in elementary school?"
+    },
+    {
+      "CODE": "Q0375",
+      "TYPE": "school",
+      "QUESTION": "Did you have a high school mascot?"
+    },
+    {
+      "CODE": "Q0376",
+      "TYPE": "school",
+      "QUESTION": "Did you go to your high school prom?"
+    },
+    {
+      "CODE": "Q0377",
+      "TYPE": "school",
+      "QUESTION": "What was your hottest year of school?"
+    },
+    {
+      "CODE": "Q0378",
+      "TYPE": "school",
+      "QUESTION": "What was your ugliest year of school?"
+    },
+    {
+      "CODE": "Q0379",
+      "TYPE": "school",
+      "QUESTION": "Did you ever win a competition in school?"
+    },
+    {
+      "CODE": "Q0380",
+      "TYPE": "school",
+      "QUESTION": "Were you a member of any college/uni clubs?"
+    },
+    {
+      "CODE": "Q0381",
+      "TYPE": "school",
+      "QUESTION": "Are you still friends with anyone from elementary school?"
+    },
+    {
+      "CODE": "Q0382",
+      "TYPE": "school",
+      "QUESTION": "Are you still friends with anyone from high school?"
+    },
+    {
+      "CODE": "Q0383",
+      "TYPE": "school",
+      "QUESTION": "Are you still friends with anyone from college/university"
+    },
+    {
+      "CODE": "Q0384",
+      "TYPE": "school",
+      "QUESTION": "Were you in a band in school?"
+    },
+    {
+      "CODE": "Q0385",
+      "TYPE": "school",
+      "QUESTION": "Did you take a music class?"
+    },
+    {
+      "CODE": "Q0386",
+      "TYPE": "school",
+      "QUESTION": "How many roommates did you have in college/university?"
+    },
+    {
+      "CODE": "Q0387",
+      "TYPE": "school",
+      "QUESTION": "Is there anyone that you wish you would've kissed in school?"
+    },
+    {
+      "CODE": "Q0388",
+      "TYPE": "school",
+      "QUESTION": "What was the most painful breakup that you had in high school?"
+    },
+    {
+      "CODE": "Q0389",
+      "TYPE": "school",
+      "QUESTION": "How often would you eat cafeteria food in high school?"
+    },
+    {
+      "CODE": "Q0390",
+      "TYPE": "school",
+      "QUESTION": "What was the most popular cafeteria food in high school?"
+    },
+    {
+      "CODE": "Q0391",
+      "TYPE": "school",
+      "QUESTION": "Have you ever performed something in front of the whole school?"
+    },
+    {
+      "CODE": "Q0392",
+      "TYPE": "school",
+      "QUESTION": "Did you have to wear a school uniform?"
+    },
+    {
+      "CODE": "Q0393",
+      "TYPE": "school",
+      "QUESTION": "Who was the most popular girl in your grade in elementary school?"
+    },
+    {
+      "CODE": "Q0394",
+      "TYPE": "school",
+      "QUESTION": "Who was the least popular girl in your grade in elementary school?"
+    },
+    {
+      "CODE": "Q0395",
+      "TYPE": "school",
+      "QUESTION": "Which did you enjoy the most: elementary school, high school, or uni/college"
     }
   ]
 }
