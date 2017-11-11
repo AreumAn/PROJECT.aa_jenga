@@ -1,8 +1,10 @@
 package work.andreaamado.aagameapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -54,10 +56,41 @@ public class MainActivity extends BaseActivity {
         ImageButton btnAnima = (ImageButton) findViewById(R.id.btn_anima);
         btnAnima.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this, SplashScreenActivity.class);
-                startActivity(intent);
+                // Set alert message
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                builder.setTitle("Type of Game");
+                builder.setMessage("Do you wanna ");
+                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing but close the dialog
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        startActivity(intent);
+
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        startActivity(intent);
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+
+//                Intent intent = new Intent(MainActivity.this, SplashScreenActivity.class);
+//                startActivity(intent);
             }
         });
+
 
         //----- Get data from JSON file -----//
 
