@@ -1,9 +1,11 @@
 package work.andreaamado.aagameapp;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,20 +36,31 @@ public class GameRandomActivity_fpage extends Fragment {
 
         lblquestion = (TextView) view.findViewById(R.id.question);
 
-        for(int i=0; i <((GameRandomActivity)getActivity()).question.length; i++) {
-            System.out.println("random page: " + ((GameRandomActivity)getActivity()).question[i]);
-        }
+//        for(int i=0; i <((GameRandomActivity)getActivity()).question.length; i++) {
+//            System.out.println("random page: " + ((GameRandomActivity)getActivity()).question[i]);
+//        }
 
         // Make Quiz 1
         makeFirstQuiz();
 
-        // Click the NEXT button
+        // Click the ENTER button
         view.findViewById(R.id.btn_enter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                         makeQuiz();
                 }
         });
+
+
+        // Click the END button
+        view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         return view;
     }

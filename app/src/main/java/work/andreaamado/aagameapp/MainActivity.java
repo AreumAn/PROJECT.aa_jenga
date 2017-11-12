@@ -19,13 +19,11 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class MainActivity extends BaseActivity {
 
-
     ArrayList<JSONObject> list = new ArrayList<>();
-//    List<String> questions = new ArrayList<>();
     String[] questions = new String[100];
 
     @Override
@@ -33,7 +31,11 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton btnAnima = (ImageButton) findViewById(R.id.btn_cat_gen);
+        // Set Category button
+        ImageButton btnGen = (ImageButton) findViewById(R.id.btn_cat_gen);
+        ImageButton btnAdu = (ImageButton) findViewById(R.id.btn_cat_adu);
+        ImageButton btnFam = (ImageButton) findViewById(R.id.btn_cat_fam);
+        ImageButton btnSch = (ImageButton) findViewById(R.id.btn_cat_sch);
 
         // Set alert message
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -113,8 +115,8 @@ public class MainActivity extends BaseActivity {
             Log.e("execption", "NO FILE", e);
         }
 
-        // Locate the image button
-        btnAnima.setOnClickListener(new View.OnClickListener() {
+        // Cat: General
+        btnGen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 int j = 0;
                 for(int i=0; i<list.size(); i++) {
@@ -130,6 +132,132 @@ public class MainActivity extends BaseActivity {
 
 
                 builder.setTitle("General");
+                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+        // Cat: Adult
+        btnAdu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                int j = 0;
+                for(int i=0; i<list.size(); i++) {
+                    try {
+                        if(list.get(i).getString("TYPE").equals("Adult")) {
+                            questions[j] = list.get(i).getString("QUESTION");
+                            j++;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                builder.setTitle("Adult");
+                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+        // Cat: Family
+        btnFam.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                int j = 0;
+                for(int i=0; i<list.size(); i++) {
+                    try {
+                        if(list.get(i).getString("TYPE").equals("Family")) {
+                            questions[j] = list.get(i).getString("QUESTION");
+                            j++;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                builder.setTitle("Family");
+                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+        // Cat: School
+        btnSch.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                int j = 0;
+                for(int i=0; i<list.size(); i++) {
+                    try {
+                        if(list.get(i).getString("TYPE").equals("School")) {
+                            questions[j] = list.get(i).getString("QUESTION");
+                            j++;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                builder.setTitle("School");
                 builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
