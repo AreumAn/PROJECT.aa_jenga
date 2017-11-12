@@ -6,19 +6,11 @@
     android:layout_height="match_parent"
     tools:context="work.andreaamado.aagameapp.GameRandomActivity">
 
-    <fragment
-        android:name="work.andreaamado.aagameapp.GameRandomActivity_fpage"
-        android:id="@+id/fragment"
-        android:layout_weight="1"
+    <include
+        layout="@layout/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="InefficientWeight,ObsoleteLayoutParam" />
+        android:layout_height="wrap_content" />
 
-    <!--<include-->
-        <!--layout="@layout/toolbar_main"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
-
-    <!--<include layout="@layout/content_game_random" />-->
+    <include layout="@layout/content_game_random" />
 
 </android.support.design.widget.CoordinatorLayout>

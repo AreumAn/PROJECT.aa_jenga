@@ -1,5 +1,6 @@
 package work.andreaamado.aagameapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,12 @@ public class GameNumbersActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_numbers);
+        Intent intent = getIntent();
+        final String[] myQuestions = intent.getStringArrayExtra("myQuestions");
+
+        for(int i=0; i < myQuestions.length; i++) {
+                    System.out.println("number page: " + myQuestions[i]);
+                }
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);

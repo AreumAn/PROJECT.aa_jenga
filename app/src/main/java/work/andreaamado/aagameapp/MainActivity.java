@@ -19,13 +19,25 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
+
+
+    ArrayList<JSONObject> list = new ArrayList<>();
+//    List<String> questions = new ArrayList<>();
+    String[] questions = new String[100];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton btnAnima = (ImageButton) findViewById(R.id.btn_cat_gen);
+
+        // Set alert message
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Do you wanna ");
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
@@ -51,45 +63,6 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-
-        // Locate the image button
-        ImageButton btnAnima = (ImageButton) findViewById(R.id.btn_anima);
-        btnAnima.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                // Set alert message
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-                builder.setTitle("Type of Game");
-                builder.setMessage("Do you wanna ");
-                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Do nothing but close the dialog
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        startActivity(intent);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        startActivity(intent);
-                        // Do nothing
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
-
-//                Intent intent = new Intent(MainActivity.this, SplashScreenActivity.class);
-//                startActivity(intent);
-            }
-        });
-
 
         //----- Get data from JSON file -----//
 
@@ -126,12 +99,12 @@ public class MainActivity extends BaseActivity {
             JSONObject jsonObject =  new JSONObject(jString);
 
             JSONArray jsonArray = jsonObject.getJSONArray("questions");
-            //ArrayList<String> list = new ArrayList<String>();
 
             for(int i=0; i<jsonArray.length(); i++) {
-                jsonObject = jsonArray.getJSONObject(i);
-                System.out.println(jsonObject.getString("CODE") + " : " + jsonObject.getString("TYPE") + " : " + jsonObject.getString("QUESTION"));
-               // list.add(jsonObject.getString("CODE") +" "+ jsonObject.getString("QUESTION"));
+                //jsonObject = jsonArray.getJSONObject(i);
+                //System.out.println(jsonObject.getString("CODE") + " : " + jsonObject.getString("TYPE") + " : " + jsonObject.getString("QUESTION"));
+                //list.add(jsonObject.getString("QUESTION"));
+                list.add(jsonArray.getJSONObject(i));
             }
 
         }catch(JSONException je){
@@ -139,6 +112,52 @@ public class MainActivity extends BaseActivity {
         }catch(Exception e){
             Log.e("execption", "NO FILE", e);
         }
+
+        // Locate the image button
+        btnAnima.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                int j = 0;
+                for(int i=0; i<list.size(); i++) {
+                    try {
+                        if(list.get(i).getString("TYPE").equals("General")) {
+                            questions[j] = list.get(i).getString("QUESTION");
+                            j++;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+                builder.setTitle("General");
+                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        intent.putExtra("myQuestions", questions);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+
+
     }
 
 }

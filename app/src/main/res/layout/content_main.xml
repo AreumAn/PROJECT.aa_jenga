@@ -42,7 +42,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/btn_anima"
+                    android:id="@+id/btn_cat_gen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -53,6 +53,7 @@
                     app:srcCompat="@drawable/btn_cat_general" />
 
                 <ImageButton
+                    android:id="@+id/btn_cat_adult"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -71,6 +72,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/btn_cat_fam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -81,6 +83,7 @@
                     app:srcCompat="@drawable/btn_cat_family" />
 
                 <ImageButton
+                    android:id="@+id/btn_cat_stu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
