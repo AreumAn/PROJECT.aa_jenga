@@ -26,6 +26,7 @@ public class MainActivity extends BaseActivity {
     ArrayList<JSONObject> list = new ArrayList<>();
     String[] questions = new String[100];
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class MainActivity extends BaseActivity {
         ImageButton btnFam = (ImageButton) findViewById(R.id.btn_cat_fam);
         ImageButton btnSch = (ImageButton) findViewById(R.id.btn_cat_sch);
 
-        // Set alert message
+//        // Set alert message
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("Do you wanna ");
 
@@ -118,26 +119,14 @@ public class MainActivity extends BaseActivity {
         // Cat: General
         btnGen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                int j = 0;
-                for(int i=0; i<list.size(); i++) {
-                    try {
-                        if(list.get(i).getString("TYPE").equals("General")) {
-                            questions[j] = list.get(i).getString("QUESTION");
-                            j++;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
+                String cate = "General";
+                makeQueArr(cate);
 
-
-                builder.setTitle("General");
+                builder.setTitle(cate);
                 builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameNumber();
                         dialog.dismiss();
                     }
                 });
@@ -146,9 +135,7 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameRandom();
                         dialog.dismiss();
                     }
                 });
@@ -156,30 +143,21 @@ public class MainActivity extends BaseActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             }
+
         });
+
 
         // Cat: Adult
         btnAdu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                int j = 0;
-                for(int i=0; i<list.size(); i++) {
-                    try {
-                        if(list.get(i).getString("TYPE").equals("Adult")) {
-                            questions[j] = list.get(i).getString("QUESTION");
-                            j++;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
+                String cate = "Adult";
+                makeQueArr(cate);
 
-                builder.setTitle("Adult");
+                builder.setTitle(cate);
                 builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameNumber();
                         dialog.dismiss();
                     }
                 });
@@ -188,9 +166,7 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameRandom();
                         dialog.dismiss();
                     }
                 });
@@ -203,25 +179,14 @@ public class MainActivity extends BaseActivity {
         // Cat: Family
         btnFam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                int j = 0;
-                for(int i=0; i<list.size(); i++) {
-                    try {
-                        if(list.get(i).getString("TYPE").equals("Family")) {
-                            questions[j] = list.get(i).getString("QUESTION");
-                            j++;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
+                String cate = "Family";
+                makeQueArr(cate);
 
-                builder.setTitle("Family");
+                builder.setTitle(cate);
                 builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameNumber();
                         dialog.dismiss();
                     }
                 });
@@ -230,9 +195,7 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameRandom();
                         dialog.dismiss();
                     }
                 });
@@ -245,25 +208,14 @@ public class MainActivity extends BaseActivity {
         // Cat: School
         btnSch.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                int j = 0;
-                for(int i=0; i<list.size(); i++) {
-                    try {
-                        if(list.get(i).getString("TYPE").equals("School")) {
-                            questions[j] = list.get(i).getString("QUESTION");
-                            j++;
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
+                String cate = "School";
+                makeQueArr(cate);
 
-                builder.setTitle("School");
+                builder.setTitle(cate);
                 builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameNumber();
                         dialog.dismiss();
                     }
                 });
@@ -272,9 +224,7 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        intent.putExtra("myQuestions", questions);
-                        startActivity(intent);
+                        intentGameRandom();
                         dialog.dismiss();
                     }
                 });
@@ -288,4 +238,32 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    // Create array of questions of specific category
+    public void makeQueArr(String cate) {
+        int j = 0;
+        for(int i=0; i<list.size(); i++) {
+            try {
+                if(list.get(i).getString("TYPE").equals(cate)) {
+                    questions[j] = list.get(i).getString("QUESTION");
+                    j++;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // Move to GameNumber
+    public void intentGameNumber() {
+        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+        intent.putExtra("myQuestions", questions);
+        startActivity(intent);
+    }
+
+    // Move to GameRandom
+    public void intentGameRandom() {
+        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+        intent.putExtra("myQuestions", questions);
+        startActivity(intent);
+    }
 }
