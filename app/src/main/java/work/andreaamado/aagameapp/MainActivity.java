@@ -49,23 +49,23 @@ public class MainActivity extends BaseActivity {
         TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
         toolbar_title.setText(getResources().getString(R.string.title_activity_categories));
 
-        // Locate the button
-        Button btnRandom = (Button) findViewById(R.id.btn_random);
-        btnRandom.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // Locate the button
-        Button btnNumber = (Button) findViewById(R.id.btn_numbers);
-        btnNumber.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                startActivity(intent);
-            }
-        });
+//        // Locate the button
+//        Button btnRandom = (Button) findViewById(R.id.btn_random);
+//        btnRandom.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View arg0) {
+//                Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        // Locate the button
+//        Button btnNumber = (Button) findViewById(R.id.btn_numbers);
+//        btnNumber.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View arg0) {
+//                Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         //----- Get data from JSON file -----//
 
