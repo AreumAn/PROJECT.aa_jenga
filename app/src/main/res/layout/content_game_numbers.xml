@@ -19,7 +19,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
-        android:text="00001"
+        android:text=""
         android:textAlignment="center"
         android:textSize="24sp"
         android:background="@drawable/border"
