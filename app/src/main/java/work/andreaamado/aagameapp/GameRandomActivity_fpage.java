@@ -1,7 +1,9 @@
 package work.andreaamado.aagameapp;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,8 @@ public class GameRandomActivity_fpage extends Fragment {
     List<Quiz> questions = new ArrayList<Quiz>();
 
     TextView lblquestion;       // show quiz
+
+    int showedQuestion = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +51,26 @@ public class GameRandomActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_enter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                        makeQuiz();
+                // Check out of questions
+                if(showedQuestion < 5) {  makeQuiz(); }
+                else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    builder.setTitle("Out of Questions");
+                    builder.setMessage("It's going to Category page ");
+
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int which) {
+                            goMain();
+                            dialog.dismiss();
+                        }
+                    });
+
+                    AlertDialog alert = builder.create();
+                    alert.show();
+
+                }
+
                 }
         });
 
@@ -56,8 +79,7 @@ public class GameRandomActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
+                goMain();
             }
         });
 
@@ -88,5 +110,13 @@ public class GameRandomActivity_fpage extends Fragment {
         // set number of quiz and question.
         lblquestion.setText(quiz.question);
 
+        // How many question showed
+        showedQuestion++;
+
+    }
+
+    public void goMain() {
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
     }
 }

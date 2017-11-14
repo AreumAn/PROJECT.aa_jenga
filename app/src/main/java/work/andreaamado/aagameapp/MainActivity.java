@@ -8,7 +8,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -24,7 +23,10 @@ import java.util.ArrayList;
 public class MainActivity extends BaseActivity {
 
     ArrayList<JSONObject> list = new ArrayList<>();
-    String[] questions = new String[100];
+    // For real
+    //String[] questions = new String[100];
+    // For test
+    String[] questions = new String[5];
 
 
     @Override
@@ -73,8 +75,10 @@ public class MainActivity extends BaseActivity {
         AssetManager assetManager = getResources().getAssets();
 
         try{
-            // Open Json
-            AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("questions.json");
+            // Open Json : real
+            //AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("questions.json");
+            // Open Json : test data
+            AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("test.json");
 
             // Read Stream
             BufferedReader br = new BufferedReader(new InputStreamReader(jfile));
@@ -245,6 +249,7 @@ public class MainActivity extends BaseActivity {
             try {
                 if(list.get(i).getString("TYPE").equals(cate)) {
                     questions[j] = list.get(i).getString("QUESTION");
+                    System.out.println(questions[j]);
                     j++;
                 }
             } catch (JSONException e) {
@@ -266,4 +271,5 @@ public class MainActivity extends BaseActivity {
         intent.putExtra("myQuestions", questions);
         startActivity(intent);
     }
+
 }

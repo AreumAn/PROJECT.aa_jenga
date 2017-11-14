@@ -1,0 +1,104 @@
+﻿{
+  "questions": [
+    {
+      "CODE": "Q0001",
+      "TYPE": "Adult",
+      "QUESTION": "Have you ever had anal sex?"
+    },
+    {
+      "CODE": "Q0002",
+      "TYPE": "Adult",
+      "QUESTION": "Have you ever farted during sex?"
+    },
+    {
+      "CODE": "Q0003",
+      "TYPE": "Adult",
+      "QUESTION": "Have you ever received given a golden shower?"
+    },
+    {
+      "CODE": "Q0004",
+      "TYPE": "Adult",
+      "QUESTION": "When was the last time you had sex?"
+    },
+    {
+      "CODE": "Q0005",
+      "TYPE": "Adult",
+      "QUESTION": "Have you ever thought about someone else during sex?"
+    },
+    {
+      "CODE": "Q0101",
+      "TYPE": "General",
+      "QUESTION": "How tech-sary are you on a scale of 1-10?"
+    },
+    {
+      "CODE": "Q0102",
+      "TYPE": "General",
+      "QUESTION": "What is your dream destination?"
+    },
+    {
+      "CODE": "Q0103",
+      "TYPE": "General",
+      "QUESTION": "What is your favourite sport to play?"
+    },
+    {
+      "CODE": "Q0104",
+      "TYPE": "General",
+      "QUESTION": "What is your favourite sport to watch?"
+    },
+    {
+      "CODE": "Q0105",
+      "TYPE": "General",
+      "QUESTION": "Do you like to play boardgames?"
+    },
+    {
+      "CODE": "Q0201",
+      "TYPE": "Family",
+      "QUESTION": "Who do you like more, your mother or father?"
+    },
+    {
+      "CODE": "Q0202",
+      "TYPE": "Family",
+      "QUESTION": "How many brothers do you have?"
+    },
+    {
+      "CODE": "Q0203",
+      "TYPE": "Family",
+      "QUESTION": "How many sisters do you have?"
+    },
+    {
+      "CODE": "Q0204",
+      "TYPE": "Family",
+      "QUESTION": "What was your first family pet's name?"
+    },
+    {
+      "CODE": "Q0205",
+      "TYPE": "Family",
+      "QUESTION": "When was the last time you saw a family member?"
+    },
+    {
+      "CODE": "Q0301",
+      "TYPE": "School",
+      "QUESTION": "What was the name of your elementary school?"
+    },
+    {
+      "CODE": "Q0302",
+      "TYPE": "School",
+      "QUESTION": "What was the name of your high school?"
+    },
+    {
+      "CODE": "Q0303",
+      "TYPE": "School",
+      "QUESTION": "What is your earliest memory of school?"
+    },
+    {
+      "CODE": "Q0304",
+      "TYPE": "School",
+      "QUESTION": "What was your first teacher's name?"
+    },
+    {
+      "CODE": "Q0305",
+      "TYPE": "School",
+      "QUESTION": "What was your favourite elementary school teacher? "
+    }
+  ]
+}

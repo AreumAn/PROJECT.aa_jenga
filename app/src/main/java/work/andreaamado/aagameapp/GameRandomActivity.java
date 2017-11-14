@@ -17,8 +17,11 @@ import java.io.OptionalDataException;
 
 public class GameRandomActivity extends AppCompatActivity {
 
+    // For real
+    //String[] question = new String[100];
+    // For test
+    String[] question = new String[5];
 
-    String[] question = new String[100];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
