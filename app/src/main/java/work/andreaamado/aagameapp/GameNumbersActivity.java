@@ -9,18 +9,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-public class GameNumbersActivity extends BaseActivity {
+public class GameNumbersActivity extends AppCompatActivity {
+
+    String[] question = new String[5];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_numbers);
         Intent intent = getIntent();
-        final String[] myQuestions = intent.getStringArrayExtra("myQuestions");
+        String[] myQuestions = intent.getStringArrayExtra("myQuestions");
 
         for(int i=0; i < myQuestions.length; i++) {
-                    System.out.println("number page: " + myQuestions[i]);
-                }
+            question[i] = myQuestions[i];
+//            System.out.println("first page: " + question[i]);
+        }
+
+        setContentView(R.layout.activity_game_numbers);
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
