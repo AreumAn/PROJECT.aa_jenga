@@ -27,6 +27,7 @@ public class MainActivity extends BaseActivity {
     //String[] questions = new String[100];
     // For test
     String[] questions = new String[5];
+    String[] questionsMix = new String[20];
 
 
     @Override
@@ -39,10 +40,13 @@ public class MainActivity extends BaseActivity {
         ImageButton btnAdu = (ImageButton) findViewById(R.id.btn_cat_adu);
         ImageButton btnFam = (ImageButton) findViewById(R.id.btn_cat_fam);
         ImageButton btnSch = (ImageButton) findViewById(R.id.btn_cat_sch);
+        ImageButton btnMix = (ImageButton) findViewById(R.id.btn_cat_mix);
 
 //        // Set alert message
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("Do you wanna ");
+        final String alertTxtNum = "Enter specific number";
+        final String alertTxtRan = "Random number";
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
@@ -50,24 +54,6 @@ public class MainActivity extends BaseActivity {
 
         TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
         toolbar_title.setText(getResources().getString(R.string.title_activity_categories));
-
-//        // Locate the button
-//        Button btnRandom = (Button) findViewById(R.id.btn_random);
-//        btnRandom.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View arg0) {
-//                Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        // Locate the button
-//        Button btnNumber = (Button) findViewById(R.id.btn_numbers);
-//        btnNumber.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View arg0) {
-//                Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         //----- Get data from JSON file -----//
 
@@ -123,23 +109,23 @@ public class MainActivity extends BaseActivity {
         // Cat: General
         btnGen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                String cate = "General";
+                final String cate = "General";
                 makeQueArr(cate);
 
                 builder.setTitle(cate);
-                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber();
+                        intentGameNumber(cate);
                         dialog.dismiss();
                     }
                 });
 
-                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom();
+                        intentGameRandom(cate);
                         dialog.dismiss();
                     }
                 });
@@ -154,23 +140,23 @@ public class MainActivity extends BaseActivity {
         // Cat: Adult
         btnAdu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                String cate = "Adult";
+                final String cate = "Adult";
                 makeQueArr(cate);
 
                 builder.setTitle(cate);
-                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber();
+                        intentGameNumber(cate);
                         dialog.dismiss();
                     }
                 });
 
-                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom();
+                        intentGameRandom(cate);
                         dialog.dismiss();
                     }
                 });
@@ -183,23 +169,23 @@ public class MainActivity extends BaseActivity {
         // Cat: Family
         btnFam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                String cate = "Family";
+                final String cate = "Family";
                 makeQueArr(cate);
 
                 builder.setTitle(cate);
-                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber();
+                        intentGameNumber(cate);
                         dialog.dismiss();
                     }
                 });
 
-                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom();
+                        intentGameRandom(cate);
                         dialog.dismiss();
                     }
                 });
@@ -212,23 +198,66 @@ public class MainActivity extends BaseActivity {
         // Cat: School
         btnSch.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                String cate = "School";
+                final String cate = "School";
                 makeQueArr(cate);
 
                 builder.setTitle(cate);
-                builder.setPositiveButton("Enter specific number", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber();
+                        intentGameNumber(cate);
                         dialog.dismiss();
                     }
                 });
 
-                builder.setNegativeButton("Random number", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom();
+                        intentGameRandom(cate);
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
+        // Cat: Mix
+        btnMix.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                final String cate = "Mix";
+                for(int i=0; i<list.size(); i++) {
+                    try {
+                        questionsMix[i] = list.get(i).getString("QUESTION");
+                           // System.out.println(questions[i]);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                builder.setTitle(cate);
+                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                        intent.putExtra("myQuestions", questionsMix);
+                        intent.putExtra("cate", cate);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                        intent.putExtra("myQuestions", questionsMix);
+                        intent.putExtra("cate", cate);
+                        startActivity(intent);
                         dialog.dismiss();
                     }
                 });
@@ -259,16 +288,18 @@ public class MainActivity extends BaseActivity {
     }
 
     // Move to GameNumber
-    public void intentGameNumber() {
+    public void intentGameNumber(String cate) {
         Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
         intent.putExtra("myQuestions", questions);
+        intent.putExtra("cate", cate);
         startActivity(intent);
     }
 
     // Move to GameRandom
-    public void intentGameRandom() {
+    public void intentGameRandom(String cate) {
         Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
         intent.putExtra("myQuestions", questions);
+        intent.putExtra("cate", cate);
         startActivity(intent);
     }
 

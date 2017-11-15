@@ -39,6 +39,8 @@ public class GameRandomActivity_fpage extends Fragment {
         View view = inflater.inflate(R.layout.activity_game_random_fragment, container, false);
 
         lblquestion = (TextView) view.findViewById(R.id.question);
+        System.out.println(((GameRandomActivity)getActivity()).question.length);
+
 
 //        for(int i=0; i <((GameRandomActivity)getActivity()).question.length; i++) {
 //            System.out.println("random page: " + ((GameRandomActivity)getActivity()).question[i]);
@@ -52,7 +54,8 @@ public class GameRandomActivity_fpage extends Fragment {
             @Override
             public void onClick(View view) {
                 // Check out of questions
-                if(showedQuestion < 5) {  makeQuiz(); }
+
+                if(showedQuestion < ((GameRandomActivity)getActivity()).question.length) {  makeQuiz(); }
                 else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                     builder.setTitle("Out of Questions");

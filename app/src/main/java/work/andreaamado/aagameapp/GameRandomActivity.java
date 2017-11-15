@@ -20,17 +20,26 @@ public class GameRandomActivity extends AppCompatActivity {
     // For real
     //String[] question = new String[100];
     // For test
-    String[] question = new String[5];
+    //String[] question = new String[5];
+    String[] question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         String[] myQuestions = intent.getStringArrayExtra("myQuestions");
+        String cate = intent.getStringExtra("cate");
+
+        System.out.println(myQuestions.length);
+
+        if(cate.equals("Mix")) {
+            question = new String[20];
+        } else {
+            question = new String[5];
+        }
 
         for(int i=0; i < myQuestions.length; i++) {
             question[i] = myQuestions[i];
-//            System.out.println("first page: " + question[i]);
         }
 
         setContentView(R.layout.activity_game_random);
