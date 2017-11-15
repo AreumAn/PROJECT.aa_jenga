@@ -2,26 +2,32 @@ package work.andreaamado.aagameapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 public class GameNumbersActivity extends AppCompatActivity {
 
-    String[] question = new String[5];
+    String[] question;
+    String cate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         String[] myQuestions = intent.getStringArrayExtra("myQuestions");
+        cate = intent.getStringExtra("cate");
+
+        if(cate.equals("Mix")) {
+            question = new String[20];
+            //question = new String[400];
+        } else {
+            question = new String[5];
+            //question = new String[100];
+        }
 
         for(int i=0; i < myQuestions.length; i++) {
             question[i] = myQuestions[i];
-//            System.out.println("first page: " + question[i]);
         }
 
         setContentView(R.layout.activity_game_numbers);

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -99,10 +98,6 @@ public class GameNumbersActivity_fpage extends Fragment {
         btn9.setOnClickListener(clickListener);
 
 
-//        for(int i=0; i <((GameRandomActivity)getActivity()).question.length; i++) {
-//            System.out.println("random page: " + ((GameRandomActivity)getActivity()).question[i]);
-//        }
-
         // Make Quiz 1
         //makeFirstQuiz();
         lblquestion.setText("Please, Enter number of Jenga block.");
@@ -116,8 +111,9 @@ public class GameNumbersActivity_fpage extends Fragment {
                 if(!lblquestionNum.getText().equals("")){
                     // Check out of questions
                     if(showedQuestion == 0) {makeFirstQuiz(questionNumtxt);}
-                    else if(showedQuestion > 0 && showedQuestion < 5) {  makeQuiz(questionNumtxt); }
-                    else {
+                    else if(showedQuestion > 0 && showedQuestion < ((GameNumbersActivity)getActivity()).question.length) {
+                        makeQuiz(questionNumtxt);
+                    } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         builder.setTitle("Out of Questions");
                         builder.setMessage("It's going to Category page ");

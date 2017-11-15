@@ -7,7 +7,6 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +23,7 @@ public class GameRandomActivity_fpage extends Fragment {
     List<Quiz> questions = new ArrayList<Quiz>();
 
     TextView lblquestion;       // show quiz
+    TextView lblquestionCat;    // show category
 
     int showedQuestion = 0;
 
@@ -39,12 +39,8 @@ public class GameRandomActivity_fpage extends Fragment {
         View view = inflater.inflate(R.layout.activity_game_random_fragment, container, false);
 
         lblquestion = (TextView) view.findViewById(R.id.question);
-        System.out.println(((GameRandomActivity)getActivity()).question.length);
-
-
-//        for(int i=0; i <((GameRandomActivity)getActivity()).question.length; i++) {
-//            System.out.println("random page: " + ((GameRandomActivity)getActivity()).question[i]);
-//        }
+        lblquestionCat = (TextView) view.findViewById(R.id.question_number);
+        lblquestionCat.setText(((GameRandomActivity)getActivity()).cate);
 
         // Make Quiz 1
         makeFirstQuiz();

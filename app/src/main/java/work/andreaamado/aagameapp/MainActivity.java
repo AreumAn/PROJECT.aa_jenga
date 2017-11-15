@@ -25,6 +25,7 @@ public class MainActivity extends BaseActivity {
     ArrayList<JSONObject> list = new ArrayList<>();
     // For real
     //String[] questions = new String[100];
+    //String[] questionsMix = new String[400];
     // For test
     String[] questions = new String[5];
     String[] questionsMix = new String[20];
