@@ -44,7 +44,7 @@
                 android:layout_height="60dp"
                 android:layout_weight="0.5"
                 android:background="@color/colorPrimary"
-                android:text="RANDOM NUMBER"
+                android:text="RANDOM"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -53,7 +53,7 @@
                 android:layout_height="60dp"
                 android:layout_weight="0.5"
                 android:background="@color/colorAccent"
-                android:text="SPECIFIC NUMBER"
+                android:text="NUMBER"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
