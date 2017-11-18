@@ -1,12 +1,16 @@
 package work.andreaamado.aagameapp;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,8 +26,10 @@ public class GameNumbersActivity_fpage extends Fragment {
 
     List<Quiz> questions = new ArrayList<Quiz>();
 
-    TextView lblquestion;       // show quiz
-    TextView lblquestionNum;    // number
+    TextView lblquestion;           // show quiz
+    TextView lblquestionNum;        // enter number
+    TextView lblquestionCat;        // category
+    TextView lblnumberOfquestion;   // show question number
 
     int showedQuestion = 0;
 
@@ -39,6 +45,10 @@ public class GameNumbersActivity_fpage extends Fragment {
 
         lblquestion = (TextView) view.findViewById(R.id.question);
         lblquestionNum = (TextView) view.findViewById(R.id.question_number);
+        lblquestionCat = (TextView) view.findViewById(R.id.cat_name);
+        lblnumberOfquestion = (TextView) view.findViewById(R.id.q_number);
+        lblquestionCat.setText(((GameNumbersActivity)getActivity()).cate);
+
 
         final Button btn0 = (Button) view.findViewById(R.id.btn_0);
         final Button btn1 = (Button) view.findViewById(R.id.btn_1);
@@ -157,7 +167,30 @@ public class GameNumbersActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goMain();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setMessage("Do you want to finish this game?");
+
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        goMain();
+                        dialog.dismiss();
+                    }
+                });
+
+
+
+                AlertDialog alert = builder.create();
+                alert.show();
+
             }
         });
 
@@ -185,7 +218,8 @@ public class GameNumbersActivity_fpage extends Fragment {
         questions.remove(0);
 
         // set number of quiz and question.
-        lblquestion.setText("Q." + questionNumtxt + ": " + quiz.question);
+        lblnumberOfquestion.setText("Q." + questionNumtxt);
+        lblquestion.setText(quiz.question);
         //lblquestion.setText("Q." + lblquestionNum + ": " + quiz.question);
         lblquestionNum.setText("");
 

@@ -53,8 +53,8 @@ public class MainActivity extends BaseActivity {
         ImageButton btnMix = (ImageButton) findViewById(R.id.btn_cat_mix);
 
 //        // Set alert message
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setMessage("Do you wanna ");
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//        builder.setMessage("Do you wanna ");
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
