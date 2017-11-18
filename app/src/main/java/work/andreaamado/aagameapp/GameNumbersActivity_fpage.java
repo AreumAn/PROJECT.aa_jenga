@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,10 @@ public class GameNumbersActivity_fpage extends Fragment {
     TextView lblquestionNum;        // enter number
     TextView lblquestionCat;        // category
     TextView lblnumberOfquestion;   // show question number
+    TextView txtTitle;
+    TextView txtBody;
+    Button btnRandom;
+    Button btnNumber;
 
     int showedQuestion = 0;
 
@@ -168,34 +174,37 @@ public class GameNumbersActivity_fpage extends Fragment {
             @Override
             public void onClick(View view) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setMessage("Do you want to finish this game?");
+                showDialog();
 
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        goMain();
-                        dialog.dismiss();
-                    }
-                });
-
-
-
-                AlertDialog alert = builder.create();
-                alert.show();
+//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//                builder.setMessage("Do you want to finish this game?");
+//
+//                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+//
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        goMain();
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//
+//
+//                AlertDialog alert = builder.create();
+//                alert.show();
 
             }
         });
 
         return view;
     }
+
 
     // make quiz1 (with make questions array)
     public void makeFirstQuiz(String questionNumtxt) {
@@ -232,4 +241,48 @@ public class GameNumbersActivity_fpage extends Fragment {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
     }
+
+    // Show the custom dialog from layout_custom_dialog.xml file
+    public void showDialog(){
+        final Dialog dialog = new Dialog(getActivity());
+        //create dialog without title
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //set the custom dialog's layout to the dialog
+        dialog.setContentView(R.layout.layout_custom_dialog);
+        //set the background of dialog box as transparent
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        //display the dialog box
+        dialog.show();
+
+        //initializing views of custom dialog
+        txtTitle = (TextView)dialog.findViewById(R.id.txtTitle);
+        txtBody = (TextView)dialog.findViewById(R.id.txtBody);
+        btnRandom = (Button)dialog.findViewById(R.id.btnRandom);
+        btnNumber = (Button)dialog.findViewById(R.id.btnNumber);
+
+
+        txtTitle.setText("Confirm");
+        txtBody.setText("Do you want to finish this game?");
+        btnRandom.setText("NO!");
+        btnNumber.setText("YES");
+
+
+        btnRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMain();
+                dialog.dismiss();
+            }
+        });
+
+
+    }
+
 }
