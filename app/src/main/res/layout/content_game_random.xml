@@ -51,27 +51,10 @@
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textSize="20sp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn." />
 
     </ScrollView>
-
-    <!--<TextView-->
-        <!--android:id="@+id/question"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginBottom="20dp"-->
-        <!--android:layout_marginEnd="20dp"-->
-        <!--android:layout_marginLeft="20dp"-->
-        <!--android:layout_marginRight="20dp"-->
-        <!--android:layout_marginStart="20dp"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn."-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/guideline_row_1"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/question_number"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_col_1"
@@ -123,97 +106,51 @@
             android:id="@+id/btn_end"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="50dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginStart="50dp"
             android:background="@color/colorGrayDark"
             android:text="END GAME"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_col_4"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline_row_2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_row_2" />
 
         <Button
             android:id="@+id/btn_enter"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:layout_marginStart="50dp"
             android:background="@color/colorAccent"
             android:text="ENTER"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_row_4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline_row_3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="@+id/guideline_col_4"
+            app:layout_constraintTop_toTopOf="@+id/guideline_row_2" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_row_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline_row_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8" />
+            app:layout_constraintGuide_percent="0.3" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline_row_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_col_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
 
     </android.support.constraint.ConstraintLayout>
-
-    <!--<Button-->
-        <!--android:id="@+id/btn_end"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:background="@color/colorGrayDark"-->
-        <!--android:text="END GAME"-->
-        <!--android:textColor="@android:color/white"-->
-        <!--android:textSize="18sp"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/guideline_row_2"-->
-        <!--android:layout_marginLeft="32dp"-->
-        <!--app:layout_constraintVertical_bias="0.0"-->
-        <!--android:layout_marginRight="32dp"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--android:layout_marginStart="32dp"-->
-        <!--android:layout_marginEnd="32dp" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/btn_enter"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:background="@color/colorAccent"-->
-        <!--android:text="ENTER"-->
-        <!--android:textColor="@android:color/white"-->
-        <!--android:textSize="18sp"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/guideline_row_4"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/guideline_row_3"-->
-        <!--android:layout_marginRight="32dp"-->
-        <!--app:layout_constraintVertical_bias="0.0"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--android:layout_marginLeft="32dp"-->
-        <!--android:layout_marginStart="32dp"-->
-        <!--android:layout_marginEnd="32dp" />-->
 
 </android.support.constraint.ConstraintLayout>
