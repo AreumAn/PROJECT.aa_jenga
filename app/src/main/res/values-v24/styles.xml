@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AATitleTextStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:titleMargin">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

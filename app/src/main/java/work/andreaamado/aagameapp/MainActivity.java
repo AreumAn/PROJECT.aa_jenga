@@ -1,15 +1,21 @@
 package work.andreaamado.aagameapp;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +35,10 @@ public class MainActivity extends BaseActivity {
     // For test
     String[] questions = new String[5];
     String[] questionsMix = new String[20];
-
+    TextView txtTitle;
+    Button btnRandom;
+    Button btnNumber;
+    String cate = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,15 +55,10 @@ public class MainActivity extends BaseActivity {
 //        // Set alert message
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("Do you wanna ");
-        final String alertTxtNum = "Enter specific number";
-        final String alertTxtRan = "Random number";
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
-
-        TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
-        toolbar_title.setText(getResources().getString(R.string.title_activity_categories));
 
         //----- Get data from JSON file -----//
 
@@ -110,125 +114,43 @@ public class MainActivity extends BaseActivity {
         // Cat: General
         btnGen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                final String cate = "General";
+                cate = "General";
                 makeQueArr(cate);
-
-                builder.setTitle(cate);
-                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDialog();
             }
-
         });
-
 
         // Cat: Adult
         btnAdu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                final String cate = "Adult";
+                cate = "Adult";
                 makeQueArr(cate);
-
-                builder.setTitle(cate);
-                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDialog();
             }
         });
 
         // Cat: Family
         btnFam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                final String cate = "Family";
+                cate = "Family";
                 makeQueArr(cate);
-
-                builder.setTitle(cate);
-                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDialog();
             }
         });
 
         // Cat: School
         btnSch.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                final String cate = "School";
+                cate = "School";
                 makeQueArr(cate);
-
-                builder.setTitle(cate);
-                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameNumber(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        intentGameRandom(cate);
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDialog();
             }
         });
 
         // Cat: Mix
         btnMix.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                final String cate = "Mix";
+                cate = "Mix";
                 for(int i=0; i<list.size(); i++) {
                     try {
                         questionsMix[i] = list.get(i).getString("QUESTION");
@@ -238,37 +160,98 @@ public class MainActivity extends BaseActivity {
                         e.printStackTrace();
                     }
                 }
-
-                builder.setTitle(cate);
-                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-                        intent.putExtra("myQuestions", questionsMix);
-                        intent.putExtra("cate", cate);
-                        startActivity(intent);
-                        dialog.dismiss();
-                    }
-                });
-
-                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-                        intent.putExtra("myQuestions", questionsMix);
-                        intent.putExtra("cate", cate);
-                        startActivity(intent);
-                        dialog.dismiss();
-                    }
-                });
-
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDialog();
+//
+//                builder.setTitle(cate);
+//                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
+//
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+//                        intent.putExtra("myQuestions", questionsMix);
+//                        intent.putExtra("cate", cate);
+//                        startActivity(intent);
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+//                        intent.putExtra("myQuestions", questionsMix);
+//                        intent.putExtra("cate", cate);
+//                        startActivity(intent);
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//                AlertDialog alert = builder.create();
+//                alert.show();
             }
         });
 
+    }
 
+    // Show the custom dialog from layout_custom_dialog.xml file
+    public void showDialog(){
+        final Dialog dialog = new Dialog(MainActivity.this);
+        //create dialog without title
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //set the custom dialog's layout to the dialog
+        dialog.setContentView(R.layout.layout_custom_dialog);
+        //set the background of dialog box as transparent
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        //display the dialog box
+        dialog.show();
+
+        //initializing views of custom dialog
+        txtTitle = (TextView)dialog.findViewById(R.id.txtTitle);
+        btnRandom = (Button)dialog.findViewById(R.id.btnRandom);
+        btnNumber = (Button)dialog.findViewById(R.id.btnNumber);
+
+        txtTitle.setText(cate);
+
+        btnRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cate == "Mix") {
+                    Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
+                    intent.putExtra("myQuestions", questionsMix);
+                    intent.putExtra("cate", cate);
+                    startActivity(intent);
+                    dialog.dismiss();
+                } else {
+                    intentGameRandom(cate);
+                    dialog.dismiss();
+                }
+            }
+        });
+
+        btnNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cate == "Mix") {
+                    Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
+                    intent.putExtra("myQuestions", questionsMix);
+                    intent.putExtra("cate", cate);
+                    startActivity(intent);
+                    dialog.dismiss();
+                } else {
+                    intentGameNumber(cate);
+                    dialog.dismiss();
+                }
+            }
+        });
+
+//        //Typeface class specifies style of a font.
+//        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Aller_Lt.ttf");
+//        //setting the font of some textviews and buttons
+//        txtLogin.setTypeface(typeface);
+//        txtEmail.setTypeface(typeface);
+//        txtPassword.setTypeface(typeface);
+//        btnLogin.setTypeface(typeface);
+//        btnPress.setTypeface(typeface);
 
     }
 
