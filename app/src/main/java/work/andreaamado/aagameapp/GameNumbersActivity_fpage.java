@@ -102,6 +102,14 @@ public class GameNumbersActivity_fpage extends Fragment {
         //makeFirstQuiz();
         lblquestion.setText("Please, Enter number of Jenga block.");
 
+        // Click Delete button
+        view.findViewById(R.id.btn_delete).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lblquestionNum.setText("");
+            }
+        });
+
         // Click the ENTER button
         view.findViewById(R.id.btn_enter).setOnClickListener(new View.OnClickListener() {
             @Override
