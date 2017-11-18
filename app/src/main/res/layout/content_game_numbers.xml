@@ -55,28 +55,38 @@
         app:layout_constraintTop_toTopOf="@+id/question_number"
         app:srcCompat="@android:drawable/ic_delete" />
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="false"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp"
+    <TextView
+        android:id="@+id/q_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_number" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:fillViewport="false"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_number"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/question_n">
 
         <TextView
             android:id="@+id/question"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="20sp" />
 
     </ScrollView>
@@ -87,8 +97,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="90dp" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_col_2"
@@ -96,8 +106,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="180dp" />
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_col_3"
@@ -105,8 +115,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="270dp" />
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_row_1"
@@ -114,8 +124,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.55"
-        tools:layout_editor_absoluteY="312dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="312dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_row_2"
@@ -123,8 +133,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7"
-        tools:layout_editor_absoluteY="397dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="397dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_row_3"
@@ -132,8 +142,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85"
-        tools:layout_editor_absoluteY="482dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="482dp" />
 
     <Button
         android:id="@+id/btn_7"
