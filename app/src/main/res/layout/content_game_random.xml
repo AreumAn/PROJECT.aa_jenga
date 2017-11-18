@@ -18,10 +18,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
-        android:text="00001"
         android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        android:background="@drawable/border"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,8 +50,7 @@
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn. Up exlaborum incididunt quis nostrud exercitatn." />
+            android:textSize="20sp" />
 
     </ScrollView>
 
