@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 /**
  * Created by areum on 2017-11-11.
  */
@@ -32,7 +31,6 @@ public class GameNumbersActivity_fpage extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -81,8 +79,6 @@ public class GameNumbersActivity_fpage extends Fragment {
                     alert.show();
                 }
 
-
-
             }
 
         };
@@ -96,7 +92,6 @@ public class GameNumbersActivity_fpage extends Fragment {
         btn7.setOnClickListener(clickListener);
         btn8.setOnClickListener(clickListener);
         btn9.setOnClickListener(clickListener);
-
 
         // Make Quiz 1
         //makeFirstQuiz();
@@ -158,7 +153,6 @@ public class GameNumbersActivity_fpage extends Fragment {
                 }
         });
 
-
         // Click the END button
         view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,7 +160,6 @@ public class GameNumbersActivity_fpage extends Fragment {
                 goMain();
             }
         });
-
 
         return view;
     }

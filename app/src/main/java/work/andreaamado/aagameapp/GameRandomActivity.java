@@ -1,13 +1,10 @@
 package work.andreaamado.aagameapp;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-
-
 
 public class GameRandomActivity extends AppCompatActivity {
 

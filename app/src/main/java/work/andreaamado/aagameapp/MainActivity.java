@@ -215,7 +215,7 @@ public class MainActivity extends BaseActivity {
         btnRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cate == "Mix") {
+                if(cate.equals("Mix")) {
                     Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
                     intent.putExtra("myQuestions", questionsMix);
                     intent.putExtra("cate", cate);
@@ -231,7 +231,7 @@ public class MainActivity extends BaseActivity {
         btnNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cate == "Mix") {
+                if(cate.equals("Mix")) {
                     Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
                     intent.putExtra("myQuestions", questionsMix);
                     intent.putExtra("cate", cate);
