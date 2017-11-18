@@ -74,14 +74,14 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:fillViewport="false"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_n">
+        app:layout_constraintTop_toBottomOf="@+id/q_number">
 
         <TextView
             android:id="@+id/question"

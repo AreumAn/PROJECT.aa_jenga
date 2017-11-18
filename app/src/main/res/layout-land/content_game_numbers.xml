@@ -74,7 +74,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:fillViewport="false"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
