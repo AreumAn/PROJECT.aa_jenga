@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/icon_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".SplashScreenActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
