@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity {
         // Cat: General
         btnGen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                cate = "General";
+                cate = "GENERAL";
                 makeQueArr(cate);
                 showDialog();
             }
@@ -123,7 +123,7 @@ public class MainActivity extends BaseActivity {
         // Cat: Adult
         btnAdu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                cate = "Adult";
+                cate = "ADULT";
                 makeQueArr(cate);
                 showDialog();
             }
@@ -132,7 +132,7 @@ public class MainActivity extends BaseActivity {
         // Cat: Family
         btnFam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                cate = "Family";
+                cate = "FAMILY";
                 makeQueArr(cate);
                 showDialog();
             }
@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity {
         // Cat: School
         btnSch.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                cate = "School";
+                cate = "SCHOOL";
                 makeQueArr(cate);
                 showDialog();
             }
@@ -150,7 +150,7 @@ public class MainActivity extends BaseActivity {
         // Cat: Mix
         btnMix.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                cate = "Mix";
+                cate = "MIX";
                 for(int i=0; i<list.size(); i++) {
                     try {
                         questionsMix[i] = list.get(i).getString("QUESTION");
