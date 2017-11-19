@@ -238,7 +238,7 @@ public class GameNumbersActivity_fpage extends Fragment {
 
         txtTitle.setText("Confirm");
         txtBody.setText("Do you want to finish this game?");
-        btnRandom.setText("NO!");
+        btnRandom.setText("NO");
         btnNumber.setText("YES");
 
 
