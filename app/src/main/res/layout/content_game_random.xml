@@ -21,7 +21,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:textAllCaps="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline_row_1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
