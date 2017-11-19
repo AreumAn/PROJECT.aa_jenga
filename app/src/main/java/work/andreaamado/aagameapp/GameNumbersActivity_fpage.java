@@ -1,12 +1,10 @@
 package work.andreaamado.aagameapp;
 import android.app.Dialog;
 import android.app.Fragment;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,6 +81,7 @@ public class GameNumbersActivity_fpage extends Fragment {
                     singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     singleDialog.setContentView(R.layout.layout_custom_singledialog);
                     singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    singleDialog.setCanceledOnTouchOutside(false);
                     singleDialog.show();
 
                     txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
@@ -135,6 +134,7 @@ public class GameNumbersActivity_fpage extends Fragment {
                 singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 singleDialog.setContentView(R.layout.layout_custom_singledialog);
                 singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                singleDialog.setCanceledOnTouchOutside(false);
                 txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
                 btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
 
@@ -226,6 +226,7 @@ public class GameNumbersActivity_fpage extends Fragment {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_custom_dialog);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
         //initializing views of custom dialog

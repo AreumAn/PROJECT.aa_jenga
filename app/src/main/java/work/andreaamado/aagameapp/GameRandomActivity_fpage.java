@@ -66,6 +66,7 @@ public class GameRandomActivity_fpage extends Fragment {
                 singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 singleDialog.setContentView(R.layout.layout_custom_singledialog);
                 singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                singleDialog.setCanceledOnTouchOutside(false);
                 txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
                 btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
                 // Check out of questions
@@ -81,20 +82,6 @@ public class GameRandomActivity_fpage extends Fragment {
                             singleDialog.dismiss();
                         }
                     });
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//                    builder.setTitle("Out of Questions");
-//                    builder.setMessage("It's going to Category page ");
-//
-//                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            goMain();
-//                            dialog.dismiss();
-//                        }
-//                    });
-//
-//                    AlertDialog alert = builder.create();
-//                    alert.show();
 
                 }
 
@@ -153,6 +140,7 @@ public class GameRandomActivity_fpage extends Fragment {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_custom_dialog);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
         //initializing views of custom dialog

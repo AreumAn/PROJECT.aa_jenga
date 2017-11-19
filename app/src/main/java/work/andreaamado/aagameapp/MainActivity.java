@@ -175,6 +175,7 @@ public class MainActivity extends BaseActivity {
         dialog.setContentView(R.layout.layout_custom_dialog);
         //set the background of dialog box as transparent
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.setCanceledOnTouchOutside(false);
         //display the dialog box
         dialog.show();
 
@@ -216,15 +217,6 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
-
-//        //Typeface class specifies style of a font.
-//        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Aller_Lt.ttf");
-//        //setting the font of some textviews and buttons
-//        txtLogin.setTypeface(typeface);
-//        txtEmail.setTypeface(typeface);
-//        txtPassword.setTypeface(typeface);
-//        btnLogin.setTypeface(typeface);
-//        btnPress.setTypeface(typeface);
 
     }
 
