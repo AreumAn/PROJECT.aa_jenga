@@ -175,7 +175,7 @@ public class MainActivity extends BaseActivity {
         dialog.setContentView(R.layout.layout_custom_dialog);
         //set the background of dialog box as transparent
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.setCanceledOnTouchOutside(false);
+        //dialog.setCanceledOnTouchOutside(false);
         //display the dialog box
         dialog.show();
 
