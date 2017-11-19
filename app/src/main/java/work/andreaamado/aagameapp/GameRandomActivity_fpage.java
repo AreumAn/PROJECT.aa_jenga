@@ -1,12 +1,17 @@
 package work.andreaamado.aagameapp;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +29,14 @@ public class GameRandomActivity_fpage extends Fragment {
 
     TextView lblquestion;       // show quiz
     TextView lblquestionCat;    // show category
+    // multiple dialog
+    TextView txtTitle;
+    TextView txtBody;
+    Button btnRandom;
+    Button btnNumber;
+    // single dialog
+    TextView txtBodyDialog;
+    Button btnSingleDialog;
 
     int showedQuestion = 0;
 
@@ -49,24 +62,39 @@ public class GameRandomActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_enter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final Dialog singleDialog = new Dialog(getActivity());
+                singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                singleDialog.setContentView(R.layout.layout_custom_singledialog);
+                singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
+                btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
                 // Check out of questions
-
                 if(showedQuestion < ((GameRandomActivity)getActivity()).question.length) {  makeQuiz(); }
                 else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    builder.setTitle("Out of Questions");
-                    builder.setMessage("It's going to Category page ");
+                    singleDialog.show();
+                    txtBodyDialog.setText("Out of Questions! It's going to Category page :) ");
 
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface dialog, int which) {
+                    btnSingleDialog.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
                             goMain();
-                            dialog.dismiss();
+                            singleDialog.dismiss();
                         }
                     });
-
-                    AlertDialog alert = builder.create();
-                    alert.show();
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//                    builder.setTitle("Out of Questions");
+//                    builder.setMessage("It's going to Category page ");
+//
+//                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            goMain();
+//                            dialog.dismiss();
+//                        }
+//                    });
+//
+//                    AlertDialog alert = builder.create();
+//                    alert.show();
 
                 }
 
@@ -78,7 +106,7 @@ public class GameRandomActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goMain();
+                showDialog();
             }
         });
 
@@ -117,5 +145,44 @@ public class GameRandomActivity_fpage extends Fragment {
     public void goMain() {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
+    }
+
+    // Show the custom dialog from layout_custom_dialog.xml file
+    public void showDialog(){
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.layout_custom_dialog);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+        //initializing views of custom dialog
+        txtTitle = (TextView)dialog.findViewById(R.id.txtTitle);
+        txtBody = (TextView)dialog.findViewById(R.id.txtBody);
+        btnRandom = (Button)dialog.findViewById(R.id.btnRandom);
+        btnNumber = (Button)dialog.findViewById(R.id.btnNumber);
+
+
+        txtTitle.setText("Confirm");
+        txtBody.setText("Do you want to finish this game?");
+        btnRandom.setText("NO!");
+        btnNumber.setText("YES");
+
+
+        btnRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMain();
+                dialog.dismiss();
+            }
+        });
+
+
     }
 }

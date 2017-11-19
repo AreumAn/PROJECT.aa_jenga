@@ -121,7 +121,7 @@
             android:layout_height="0dp"
             android:layout_marginRight="50dp"
             android:background="@color/colorAccent"
-            android:text="ENTER"
+            android:text="NEXT"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline_row_3"

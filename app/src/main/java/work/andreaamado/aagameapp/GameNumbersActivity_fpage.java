@@ -7,8 +7,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,10 +30,15 @@ public class GameNumbersActivity_fpage extends Fragment {
     TextView lblquestionNum;        // enter number
     TextView lblquestionCat;        // category
     TextView lblnumberOfquestion;   // show question number
+    // multiple dialog
     TextView txtTitle;
     TextView txtBody;
     Button btnRandom;
     Button btnNumber;
+    // single dialog
+    TextView txtBodyDialog;
+    Button btnSingleDialog;
+
 
     int showedQuestion = 0;
 
@@ -55,7 +58,6 @@ public class GameNumbersActivity_fpage extends Fragment {
         lblnumberOfquestion = (TextView) view.findViewById(R.id.q_number);
         lblquestionCat.setText(((GameNumbersActivity)getActivity()).cate);
 
-
         final Button btn0 = (Button) view.findViewById(R.id.btn_0);
         final Button btn1 = (Button) view.findViewById(R.id.btn_1);
         final Button btn2 = (Button) view.findViewById(R.id.btn_2);
@@ -71,28 +73,31 @@ public class GameNumbersActivity_fpage extends Fragment {
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(v.getContext(),((Button) v).getText(), Toast.LENGTH_LONG).show();
-
                 String text = (String) lblquestionNum.getText();
                 text += ((Button) v).getText();
 
                 if (Integer.parseInt(text) > 0 && Integer.parseInt(text) < 101) {
                     lblquestionNum.setText(Integer.parseInt(text) + "");
                 } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                    //builder.setTitle("Warring");
-                    builder.setMessage("Please, put number between 1 and 100.");
+                    final Dialog singleDialog = new Dialog(getActivity());
+                    singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    singleDialog.setContentView(R.layout.layout_custom_singledialog);
+                    singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    singleDialog.show();
 
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
+                    btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
 
-                        public void onClick(DialogInterface dialog, int which) {
+                    txtBodyDialog.setText("Please, put number between 1 and 100.");
+
+                    btnSingleDialog.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
                             lblquestionNum.setText("");
-                            dialog.dismiss();
+                            singleDialog.dismiss();
                         }
                     });
 
-                    AlertDialog alert = builder.create();
-                    alert.show();
                 }
 
             }
@@ -126,6 +131,12 @@ public class GameNumbersActivity_fpage extends Fragment {
             @Override
             public void onClick(View view) {
                 String questionNumtxt = (String) lblquestionNum.getText();
+                final Dialog singleDialog = new Dialog(getActivity());
+                singleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                singleDialog.setContentView(R.layout.layout_custom_singledialog);
+                singleDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
+                btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
 
                 if(!lblquestionNum.getText().equals("")){
                     // Check out of questions
@@ -133,36 +144,28 @@ public class GameNumbersActivity_fpage extends Fragment {
                     else if(showedQuestion > 0 && showedQuestion < ((GameNumbersActivity)getActivity()).question.length) {
                         makeQuiz(questionNumtxt);
                     } else {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                        builder.setTitle("Out of Questions");
-                        builder.setMessage("It's going to Category page ");
+                        singleDialog.show();
+                        txtBodyDialog.setText("Out of Questions! It's going to Category page :) ");
 
-                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface dialog, int which) {
+                        btnSingleDialog.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
                                 goMain();
-                                dialog.dismiss();
+                                singleDialog.dismiss();
                             }
                         });
 
-                        AlertDialog alert = builder.create();
-                        alert.show();
-
                     }
                 } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//                    builder.setTitle("Out of Questions");
-                    builder.setMessage("Please, Enter the number first.");
+                    singleDialog.show();
+                    txtBodyDialog.setText("Please, Enter the number first. ");
 
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
+                    btnSingleDialog.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            singleDialog.dismiss();
                         }
                     });
-
-                    AlertDialog alert = builder.create();
-                    alert.show();
                 }
 
 
@@ -173,32 +176,7 @@ public class GameNumbersActivity_fpage extends Fragment {
         view.findViewById(R.id.btn_end).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 showDialog();
-
-//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//                builder.setMessage("Do you want to finish this game?");
-//
-//                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-//
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        goMain();
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//
-//
-//                AlertDialog alert = builder.create();
-//                alert.show();
-
             }
         });
 
@@ -245,13 +223,9 @@ public class GameNumbersActivity_fpage extends Fragment {
     // Show the custom dialog from layout_custom_dialog.xml file
     public void showDialog(){
         final Dialog dialog = new Dialog(getActivity());
-        //create dialog without title
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //set the custom dialog's layout to the dialog
         dialog.setContentView(R.layout.layout_custom_dialog);
-        //set the background of dialog box as transparent
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        //display the dialog box
         dialog.show();
 
         //initializing views of custom dialog
@@ -284,5 +258,6 @@ public class GameNumbersActivity_fpage extends Fragment {
 
 
     }
+
 
 }
