@@ -2,8 +2,10 @@
     <string name="app_name">AA Jenga</string>
     <string name="title_activity_base">Base Activity</string>
     <string name="title_activity_categories">CATEGORIES</string>
-    <string name="title_activity_help">HELP</string>
     <string name="title_activity_about">ABOUT</string>
-    <string name="title_activity_game_numbers">Numbers</string>
-    <string name="title_activity_game_random">Random</string>
+    <string name="title_activity_game_numbers">NUMBER</string>
+    <string name="title_activity_game_random">RANDOM</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 </resources>
