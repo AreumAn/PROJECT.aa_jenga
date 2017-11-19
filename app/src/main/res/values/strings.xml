@@ -6,4 +6,8 @@
     <string name="title_activity_about">ABOUT</string>
     <string name="title_activity_game_numbers">Numbers</string>
     <string name="title_activity_game_random">Random</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 </resources>

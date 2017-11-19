@@ -161,33 +161,6 @@ public class MainActivity extends BaseActivity {
                     }
                 }
                 showDialog();
-//
-//                builder.setTitle(cate);
-//                builder.setPositiveButton(alertTxtNum, new DialogInterface.OnClickListener() {
-//
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Intent intent = new Intent(MainActivity.this, GameNumbersActivity.class);
-//                        intent.putExtra("myQuestions", questionsMix);
-//                        intent.putExtra("cate", cate);
-//                        startActivity(intent);
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//                builder.setNegativeButton(alertTxtRan, new DialogInterface.OnClickListener() {
-//
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Intent intent = new Intent(MainActivity.this, GameRandomActivity.class);
-//                        intent.putExtra("myQuestions", questionsMix);
-//                        intent.putExtra("cate", cate);
-//                        startActivity(intent);
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//                AlertDialog alert = builder.create();
-//                alert.show();
             }
         });
 
