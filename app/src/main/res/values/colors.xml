@@ -11,22 +11,22 @@
     <color name="white">#ffffff</color>
 
     <!-- Screens background color-->
-    <color name="bg_screen1">@color/colorAccent</color>
-    <color name="bg_screen2">@color/colorAccent</color>
-    <color name="bg_screen3">@color/colorAccent</color>
-    <color name="bg_screen4">@color/colorAccent</color>
+    <!--<color name="bg_screen1">@color/colorAccent</color>-->
+    <!--<color name="bg_screen2">@color/colorAccent</color>-->
+    <!--<color name="bg_screen3">@color/colorAccent</color>-->
+    <!--<color name="bg_screen4">@color/colorAccent</color>-->
 
     <array name="array_dot_active">
-        <item>@color/colorPrimary</item>
-        <item>@color/colorPrimary</item>
-        <item>@color/colorPrimary</item>
-        <item>@color/colorPrimary</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
     </array>
 
     <array name="array_dot_inactive">
-        <item>@color/colorGrayLight</item>
-        <item>@color/colorGrayLight</item>
-        <item>@color/colorGrayLight</item>
-        <item>@color/colorGrayLight</item>
+        <item>@color/colorPrimaryLightPlus</item>
+        <item>@color/colorPrimaryLightPlus</item>
+        <item>@color/colorPrimaryLightPlus</item>
+        <item>@color/colorPrimaryLightPlus</item>
     </array>
 </resources>
