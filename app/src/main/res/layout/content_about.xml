@@ -169,18 +169,18 @@
             app:layout_constraintStart_toStartOf="@+id/guideline_col_0"
             app:layout_constraintTop_toBottomOf="@+id/text_name_areum" />
 
-        <Button
-            android:id="@+id/text_link_amanda"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorAccent"
-            android:text="Website"
-            android:textColor="@color/white"
-            android:textSize="11sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline_col_1"
-            app:layout_constraintTop_toBottomOf="@+id/text_name_amanda" />
+        <!--<Button-->
+            <!--android:id="@+id/text_link_amanda"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:text="Website"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="11sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/guideline_col_1"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/text_name_amanda" />-->
 
         <TextView
             android:id="@+id/text_version"
