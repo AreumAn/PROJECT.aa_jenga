@@ -56,6 +56,9 @@ public class MainActivity extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
+        TextView toolbar_title = (TextView) findViewById(R.id.action_bar_title);
+        toolbar_title.setText("CATEGORY");
+
         //----- Get data from JSON file -----//
 
         // Get assets
