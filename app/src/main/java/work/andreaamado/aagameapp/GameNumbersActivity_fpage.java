@@ -87,7 +87,7 @@ public class GameNumbersActivity_fpage extends Fragment {
                     txtBodyDialog = (TextView)singleDialog.findViewById(R.id.txtBodyDialog);
                     btnSingleDialog = (Button)singleDialog.findViewById(R.id.btnDialog);
 
-                    txtBodyDialog.setText("Please, put number between 1 and 100.");
+                    txtBodyDialog.setText("Please enter a number between 1 and 100.");
 
                     btnSingleDialog.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -115,7 +115,7 @@ public class GameNumbersActivity_fpage extends Fragment {
 
         // Make Quiz 1
         //makeFirstQuiz();
-        lblquestion.setText("Please, Enter number of Jenga block.");
+        lblquestion.setText("Please enter the Jenga block number.");
 
         // Click Delete button
         view.findViewById(R.id.btn_delete).setOnClickListener(new View.OnClickListener() {
@@ -145,7 +145,7 @@ public class GameNumbersActivity_fpage extends Fragment {
                         makeQuiz(questionNumtxt);
                     } else {
                         singleDialog.show();
-                        txtBodyDialog.setText("Out of Questions! It's going to Category page :) ");
+                        txtBodyDialog.setText("Out of questions! Returning to Category page ");
 
                         btnSingleDialog.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -158,7 +158,7 @@ public class GameNumbersActivity_fpage extends Fragment {
                     }
                 } else {
                     singleDialog.show();
-                    txtBodyDialog.setText("Please, Enter the number first. ");
+                    txtBodyDialog.setText("Please enter the number first! ");
 
                     btnSingleDialog.setOnClickListener(new View.OnClickListener() {
                         @Override

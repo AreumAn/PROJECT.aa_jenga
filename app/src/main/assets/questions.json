@@ -13,7 +13,7 @@
     {
       "CODE": "Q0003",
       "TYPE": "Adult",
-      "QUESTION": "Have you ever received given a golden shower?"
+      "QUESTION": "Have you ever received/given a golden shower?"
     },
     {
       "CODE": "Q0004",
@@ -133,7 +133,7 @@
     {
       "CODE": "Q0027",
       "TYPE": "Adult",
-      "QUESTION": "Eyes or smile, which is more important to you?"
+      "QUESTION": "Eyes or smile: which is more important to you?"
     },
     {
       "CODE": "Q0028",
@@ -223,7 +223,7 @@
     {
       "CODE": "Q0045",
       "TYPE": "Adult",
-      "QUESTION": "Have you ever given or received a pearl necklace"
+      "QUESTION": "Have you ever given/received a pearl necklace"
     },
     {
       "CODE": "Q0046",
@@ -263,7 +263,7 @@
     {
       "CODE": "Q0053",
       "TYPE": "Adult",
-      "QUESTION": "On the bottom or on the top?"
+      "QUESTION": "Do you prefer to be on the bottom or on the top?"
     },
     {
       "CODE": "Q0054",
@@ -343,7 +343,7 @@
     {
       "CODE": "Q0069",
       "TYPE": "Adult",
-      "QUESTION": "Do you watch porn?"
+      "QUESTION": "Do you watch pornography?"
     },
     {
       "CODE": "Q0070",
@@ -408,7 +408,7 @@
     {
       "CODE": "Q0082",
       "TYPE": "Adult",
-      "QUESTION": "Have you ever handcuffed a partner to bed?"
+      "QUESTION": "Have you ever handcuffed a partner to a bed?"
     },
     {
       "CODE": "Q0083",
@@ -418,7 +418,7 @@
     {
       "CODE": "Q0084",
       "TYPE": "Adult",
-      "QUESTION": "Least favourite sexual position"
+      "QUESTION": "What is your least favourite sexual position"
     },
     {
       "CODE": "Q0085",
@@ -428,7 +428,7 @@
     {
       "CODE": "Q0086",
       "TYPE": "Adult",
-      "QUESTION": "What is the boringest sex that you've ever had?"
+      "QUESTION": "What is the most boring sex that you've ever had?"
     },
     {
       "CODE": "Q0087",
@@ -463,12 +463,12 @@
     {
       "CODE": "Q0093",
       "TYPE": "Adult",
-      "QUESTION": "Do you and your partner use labe?"
+      "QUESTION": "Do you and your partner use lube?"
     },
     {
       "CODE": "Q0094",
       "TYPE": "Adult",
-      "QUESTION": "Favourite place to have sex?"
+      "QUESTION": "What is your favourite place to have sex?"
     },
     {
       "CODE": "Q0095",
@@ -488,7 +488,7 @@
     {
       "CODE": "Q0098",
       "TYPE": "Adult",
-      "QUESTION": "Do you think tatooes are sexy?"
+      "QUESTION": "Do you think tattoos are sexy?"
     },
     {
       "CODE": "Q0099",
@@ -503,7 +503,7 @@
     {
       "CODE": "Q0101",
       "TYPE": "General",
-      "QUESTION": "How tech-sary are you on a scale of 1-10?"
+      "QUESTION": "How tech-savvy are you on a scale of 1-10?"
     },
     {
       "CODE": "Q0102",
@@ -528,7 +528,7 @@
     {
       "CODE": "Q0106",
       "TYPE": "General",
-      "QUESTION": "Have you ever stolen?"
+      "QUESTION": "Have you ever stolen anything?"
     },
     {
       "CODE": "Q0107",
@@ -583,7 +583,7 @@
     {
       "CODE": "Q0117",
       "TYPE": "General",
-      "QUESTION": "Pizza or pasta?"
+      "QUESTION": "Do you prefer pizza or pasta?"
     },
     {
       "CODE": "Q0118",
@@ -623,7 +623,7 @@
     {
       "CODE": "Q0125",
       "TYPE": "General",
-      "QUESTION": "Bread or Pasta?"
+      "QUESTION": "Do you prefer bread or Pasta?"
     },
     {
       "CODE": "Q0126",
@@ -668,7 +668,7 @@
     {
       "CODE": "Q0134",
       "TYPE": "General",
-      "QUESTION": "Apples or oranges?"
+      "QUESTION": "Do you prefer apples or oranges?"
     },
     {
       "CODE": "Q0135",
@@ -688,12 +688,12 @@
     {
       "CODE": "Q0138",
       "TYPE": "General",
-      "QUESTION": "Who was the first person you spoke to today?"
+      "QUESTION": "Who was the first person that you spoke to today?"
     },
     {
       "CODE": "Q0139",
       "TYPE": "General",
-      "QUESTION": "Cheese or meat?"
+      "QUESTION": "Do you prefer cheese or meat?"
     },
     {
       "CODE": "Q0140",
@@ -728,17 +728,17 @@
     {
       "CODE": "Q0146",
       "TYPE": "General",
-      "QUESTION": "Cats or dogs?"
+      "QUESTION": "Do you prefer cats or dogs?"
     },
     {
       "CODE": "Q0147",
       "TYPE": "General",
-      "QUESTION": "The Beatles or The Rolling Stones?"
+      "QUESTION": "Do you prefer The Beatles or The Rolling Stones?"
     },
     {
       "CODE": "Q0148",
       "TYPE": "General",
-      "QUESTION": "What was the last movie that you wacthed?"
+      "QUESTION": "What was the last movie that you watched?"
     },
     {
       "CODE": "Q0149",
@@ -748,12 +748,12 @@
     {
       "CODE": "Q0150",
       "TYPE": "General",
-      "QUESTION": "When was the hardest you've ever laughed in your life?"
+      "QUESTION": "When was the hardest that you've ever laughed in your life?"
     },
     {
       "CODE": "Q0151",
       "TYPE": "General",
-      "QUESTION": "Do you smoke ?"
+      "QUESTION": "Do you smoke?"
     },
     {
       "CODE": "Q0152",
@@ -813,7 +813,7 @@
     {
       "CODE": "Q0163",
       "TYPE": "General",
-      "QUESTION": "Movies or books?"
+      "QUESTION": "Do you prefer movies or books?"
     },
     {
       "CODE": "Q0164",
@@ -858,7 +858,7 @@
     {
       "CODE": "Q0172",
       "TYPE": "General",
-      "QUESTION": "Circle or square?"
+      "QUESTION": "Do you prefer circle or square?"
     },
     {
       "CODE": "Q0173",
@@ -943,7 +943,7 @@
     {
       "CODE": "Q0189",
       "TYPE": "General",
-      "QUESTION": "Pets or kids?"
+      "QUESTION": "Do you prefer pets or kids?"
     },
     {
       "CODE": "Q0190",
@@ -963,7 +963,7 @@
     {
       "CODE": "Q0193",
       "TYPE": "General",
-      "QUESTION": "Bright lights or dim lights?"
+      "QUESTION": "Do you prefer bright lights or dim lights?"
     },
     {
       "CODE": "Q0194",
@@ -978,7 +978,7 @@
     {
       "CODE": "Q0196",
       "TYPE": "General",
-      "QUESTION": "Socks or bare feet?"
+      "QUESTION": "Do you prefer socks or bare feet?"
     },
     {
       "CODE": "Q0197",
@@ -988,7 +988,7 @@
     {
       "CODE": "Q0198",
       "TYPE": "General",
-      "QUESTION": "White or whole wheat bread?"
+      "QUESTION": "Do you prefer white or whole wheat bread?"
     },
     {
       "CODE": "Q0199",
@@ -1048,17 +1048,17 @@
     {
       "CODE": "Q0210",
       "TYPE": "Family",
-      "QUESTION": "Use three words to describe your family"
+      "QUESTION": "Use three words to describe your family."
     },
     {
       "CODE": "Q0211",
       "TYPE": "Family",
-      "QUESTION": "Use three words to describe your childhood"
+      "QUESTION": "Use three words to describe your childhood."
     },
     {
       "CODE": "Q0212",
       "TYPE": "Family",
-      "QUESTION": "What was the first disagreement you ever had with your parents?"
+      "QUESTION": "What was the first disagreement that you ever had with your parents?"
     },
     {
       "CODE": "Q0213",
@@ -1078,7 +1078,7 @@
     {
       "CODE": "Q0216",
       "TYPE": "Family",
-      "QUESTION": "DId you have any imaginary friends when you were a kid?"
+      "QUESTION": "Did you have any imaginary friends when you were a kid?"
     },
     {
       "CODE": "Q0217",
@@ -1103,7 +1103,7 @@
     {
       "CODE": "Q0221",
       "TYPE": "Family",
-      "QUESTION": "What is something your parents would never do?"
+      "QUESTION": "What is something that you've done that your parents would never do?"
     },
     {
       "CODE": "Q0222",
@@ -1168,7 +1168,7 @@
     {
       "CODE": "Q0234",
       "TYPE": "Family",
-      "QUESTION": "Which diseases run in your family?"
+      "QUESTION": "What diseases run in your family?"
     },
     {
       "CODE": "Q0235",
@@ -1258,7 +1258,7 @@
     {
       "CODE": "Q0252",
       "TYPE": "Family",
-      "QUESTION": "Are you the oldest or yougest or middle sibling?"
+      "QUESTION": "Are you the oldest or youngest or middle sibling?"
     },
     {
       "CODE": "Q0253",
@@ -1273,7 +1273,7 @@
     {
       "CODE": "Q0255",
       "TYPE": "Family",
-      "QUESTION": "Describe one of your traditions from childhood"
+      "QUESTION": "Describe one of your traditions from childhood."
     },
     {
       "CODE": "Q0256",
@@ -1323,17 +1323,17 @@
     {
       "CODE": "Q0265",
       "TYPE": "Family",
-      "QUESTION": "Describe your maternal grandparents"
+      "QUESTION": "Describe your maternal grandparents."
     },
     {
       "CODE": "Q0266",
       "TYPE": "Family",
-      "QUESTION": "Describe your paternal grandparents"
+      "QUESTION": "Describe your paternal grandparents."
     },
     {
       "CODE": "Q0267",
       "TYPE": "Family",
-      "QUESTION": "Use three words to describe your parents relationship"
+      "QUESTION": "Use three words to describe your parents relationship."
     },
     {
       "CODE": "Q0268",
@@ -1368,7 +1368,7 @@
     {
       "CODE": "Q0274",
       "TYPE": "Family",
-      "QUESTION": "WHich grandparents are better: yout maternal or paternal grandparents?"
+      "QUESTION": "Which grandparents are better: your maternal or paternal grandparents?"
     },
     {
       "CODE": "Q0275",
@@ -1393,7 +1393,7 @@
     {
       "CODE": "Q0279",
       "TYPE": "Family",
-      "QUESTION": "Did you ever rat out your sibling? What did they do?"
+      "QUESTION": "Did you ever rat out your sibling(s)? What did they do?"
     },
     {
       "CODE": "Q0280",
@@ -1483,7 +1483,7 @@
     {
       "CODE": "Q0297",
       "TYPE": "Family",
-      "QUESTION": "HOw often do you see your family?"
+      "QUESTION": "How often do you see your family?"
     },
     {
       "CODE": "Q0298",
@@ -1498,7 +1498,7 @@
     {
       "CODE": "Q0300",
       "TYPE": "Family",
-      "QUESTION": "Who is your favourite family memeber?"
+      "QUESTION": "Who is your favourite family member?"
     },
     {
       "CODE": "Q0301",
@@ -1523,7 +1523,7 @@
     {
       "CODE": "Q0305",
       "TYPE": "School",
-      "QUESTION": "What was your favourite elementary school teacher? "
+      "QUESTION": "What was your favourite elementary school teacher?"
     },
     {
       "CODE": "Q0306",
@@ -1538,7 +1538,7 @@
     {
       "CODE": "Q0308",
       "TYPE": "School",
-      "QUESTION": "Who was your least favourite high school teacher? "
+      "QUESTION": "Who was your least favourite high school teacher?"
     },
     {
       "CODE": "Q0309",
@@ -1848,7 +1848,7 @@
     {
       "CODE": "Q0370",
       "TYPE": "School",
-      "QUESTION": "What was in your school yard at your elementary school?"
+      "QUESTION": "What was in your schoolyard at your elementary school?"
     },
     {
       "CODE": "Q0371",
@@ -1923,7 +1923,7 @@
     {
       "CODE": "Q0385",
       "TYPE": "School",
-      "QUESTION": "Were you a member of any college/uni clubs?"
+      "QUESTION": "Were you a member of any college/university clubs?"
     },
     {
       "CODE": "Q0386",
@@ -1943,7 +1943,7 @@
     {
       "CODE": "Q0389",
       "TYPE": "School",
-      "QUESTION": "Were you in a band in school?"
+      "QUESTION": "Were you ever in a band in school?"
     },
     {
       "CODE": "Q0390",
@@ -1988,12 +1988,12 @@
     {
       "CODE": "Q0398",
       "TYPE": "School",
-      "QUESTION": "Who was the most popular girl in your grade in elementary school?"
+      "QUESTION": "Who was the most popular girl in your elementary school?"
     },
     {
       "CODE": "Q0399",
       "TYPE": "School",
-      "QUESTION": "Who was the least popular girl in your grade in elementary school?"
+      "QUESTION": "Who was the least popular girl in your elementary school?"
     },
     {
       "CODE": "Q0400",

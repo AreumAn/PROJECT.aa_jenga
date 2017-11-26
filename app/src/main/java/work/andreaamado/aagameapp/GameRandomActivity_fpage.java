@@ -73,7 +73,7 @@ public class GameRandomActivity_fpage extends Fragment {
                 if(showedQuestion < ((GameRandomActivity)getActivity()).question.length) {  makeQuiz(); }
                 else {
                     singleDialog.show();
-                    txtBodyDialog.setText("Out of Questions! It's going to Category page :) ");
+                    txtBodyDialog.setText("Out of questions! Returning to Category page  ");
 
                     btnSingleDialog.setOnClickListener(new View.OnClickListener() {
                         @Override
