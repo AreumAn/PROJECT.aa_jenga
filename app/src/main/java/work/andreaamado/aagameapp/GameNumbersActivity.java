@@ -19,11 +19,11 @@ public class GameNumbersActivity extends AppCompatActivity {
         cate = intent.getStringExtra("cate");
 
         if(cate.equals("Mix")) {
-            question = new String[20];
-            //question = new String[400];
+            //question = new String[20];
+            question = new String[400];
         } else {
-            question = new String[5];
-            //question = new String[100];
+            //question = new String[5];
+            question = new String[100];
         }
 
         for(int i=0; i < myQuestions.length; i++) {

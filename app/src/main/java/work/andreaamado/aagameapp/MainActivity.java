@@ -30,11 +30,11 @@ public class MainActivity extends BaseActivity {
 
     ArrayList<JSONObject> list = new ArrayList<>();
     // For real
-    //String[] questions = new String[100];
-    //String[] questionsMix = new String[400];
+    String[] questions = new String[100];
+    String[] questionsMix = new String[400];
     // For test
-    String[] questions = new String[5];
-    String[] questionsMix = new String[20];
+    //String[] questions = new String[5];
+    //String[] questionsMix = new String[20];
     TextView txtTitle;
     Button btnRandom;
     Button btnNumber;
@@ -66,9 +66,9 @@ public class MainActivity extends BaseActivity {
 
         try{
             // Open Json : real
-            //AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("questions.json");
+            AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("questions.json");
             // Open Json : test data
-            AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("test.json");
+            //AssetManager.AssetInputStream jfile = (AssetManager.AssetInputStream)assetManager.open("test.json");
 
             // Read Stream
             BufferedReader br = new BufferedReader(new InputStreamReader(jfile));
