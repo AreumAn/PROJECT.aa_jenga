@@ -98,9 +98,6 @@ public class MainActivity extends BaseActivity {
             JSONArray jsonArray = jsonObject.getJSONArray("questions");
 
             for(int i=0; i<jsonArray.length(); i++) {
-                //jsonObject = jsonArray.getJSONObject(i);
-                //System.out.println(jsonObject.getString("CODE") + " : " + jsonObject.getString("TYPE") + " : " + jsonObject.getString("QUESTION"));
-                //list.add(jsonObject.getString("QUESTION"));
                 list.add(jsonArray.getJSONObject(i));
             }
 
