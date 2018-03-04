@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aa_jenga.iml" filepath="$PROJECT_DIR$/aa_jenga.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/aa_jenga-app.iml" filepath="$PROJECT_DIR$/app/aa_jenga-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gitJenga-aa_jenga.iml" filepath="$PROJECT_DIR$/gitJenga-aa_jenga.iml" />
     </modules>
   </component>
 </project>
