@@ -4,12 +4,12 @@
     tools:context="work.andreaamado.aagameapp.MainActivity">
     <item
         android:id="@+id/action_categories"
-        android:orderInCategory="100"
+        android:orderInCategory="1"
         android:title="@string/title_activity_categories"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_about"
-        android:orderInCategory="100"
+        android:orderInCategory="2"
         android:title="@string/title_activity_about"
         app:showAsAction="never" />
 </menu>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AA Jenga</string>
+    <string name="app_name">Block Game</string>
     <string name="title_activity_base">Base Activity</string>
     <string name="title_activity_categories">CATEGORY</string>
     <string name="title_activity_about">ABOUT</string>

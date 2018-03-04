@@ -33,7 +33,7 @@ public class AboutActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent andreadWeb = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://www.andreaamado.work"));
+                        Uri.parse("http://www.andreaamado.ca"));
                 startActivity(andreadWeb);
             }
         });
